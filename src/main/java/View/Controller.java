@@ -1,10 +1,7 @@
 package View;
 
-import javafx.event.ActionEvent;
+import java.util.Observer;
 
-public class Controller {
-    public void pressButton(ActionEvent actionEvent) {
-        System.out.println("Hi");
-    }
+public abstract class Controller implements Observer {
 
 }

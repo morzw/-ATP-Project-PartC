@@ -1,6 +1,14 @@
 package View;
 
 import javafx.fxml.Initializable;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -106,4 +114,5 @@ public class MyViewController implements IView, Initializable {
     public void mouseClicked(MouseEvent mouseEvent) {
         mazeDisplayer.requestFocus();
     }
+
 }
