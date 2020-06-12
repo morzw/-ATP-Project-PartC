@@ -25,6 +25,7 @@ public class MyModel extends Observable implements IModel {
     private Maze maze;
     private int currPosRow;
     private int currPosCol;
+    private ArrayList<AState> mazeSolutionSteps;
 
     //constructor
     private MyModel() {
@@ -32,8 +33,6 @@ public class MyModel extends Observable implements IModel {
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         mazeGeneratingServer.start();
         solveSearchProblemServer.start();
-//        CommunicateWithServer_MazeGenerating();
-//        CommunicateWithServer_SolveSearchProblem();
 //        mazeGeneratingServer.stop();
 //        solveSearchProblemServer.stop();
     }
@@ -79,6 +78,11 @@ public class MyModel extends Observable implements IModel {
         }
     }
 
+    @Override
+    public void solveMaze() {
+        CommunicateWithServer_SolveSearchProblem();
+    }
+
     private void CommunicateWithServer_SolveSearchProblem() {
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5401, (IClientStrategy) (inFromServer, outToServer) -> {
@@ -86,22 +90,13 @@ public class MyModel extends Observable implements IModel {
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
-                    MyMazeGenerator mg = new MyMazeGenerator();
-                    Maze maze = mg.generate(50, 50);
-                    maze.print();
                     toServer.writeObject(maze);
                     toServer.flush();
                     Solution mazeSolution = (Solution)fromServer.readObject();
-                    System.out.println(String.format("Solution steps: %s", mazeSolution));
-                    ArrayList<AState> mazeSolutionSteps = mazeSolution.getSolutionPath();
-
-                    for(int i = 0; i < mazeSolutionSteps.size(); ++i) {
-                        System.out.println(String.format("%s. %s", i, ((AState)mazeSolutionSteps.get(i)).toString()));
-                    }
+                    mazeSolutionSteps = mazeSolution.getSolutionPath();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
