@@ -9,17 +9,16 @@ import java.util.Observer;
 public class MyViewModel extends Observable implements Observer {
 
     private static MyViewModel myViewModel;
-    private IModel model;
 
     //constructor
-    private MyViewModel(IModel model) {
-        this.model = model;
+    private MyViewModel() {
+
     }
 
     //get instance
-    public static MyViewModel getInstance(IModel model) {
+    public static MyViewModel getInstance() {
         if (myViewModel == null) {
-            myViewModel = new MyViewModel(model);
+            myViewModel = new MyViewModel();
         }
         return myViewModel;
     }
