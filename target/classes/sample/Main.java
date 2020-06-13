@@ -1,5 +1,9 @@
 package sample;
 
+import Model.IModel;
+import Model.MyModel;
+import View.IView;
+import ViewModel.MyViewModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,9 +14,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../View/MyView.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        MyModel model = MyModel.getInstance(); //??
+        MyViewModel viewModel = MyViewModel.getInstance();
+        model.addObserver(viewModel);
+
+        Parent root = FXMLLoader.load(getClass().getResource("../View/welcomePage.fxml"));
+        primaryStage.setTitle("MorGalMaze");
+        primaryStage.setScene(new Scene(root, 768, 614));
         primaryStage.show();
     }
 

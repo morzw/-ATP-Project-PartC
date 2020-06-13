@@ -17,9 +17,10 @@ public class Main extends Application {
         MyModel model = MyModel.getInstance(); //??
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
+
         Parent root = FXMLLoader.load(getClass().getResource("../View/welcomePage.fxml"));
         primaryStage.setTitle("MorGalMaze");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 768, 614));
         primaryStage.show();
     }
 

@@ -1,12 +1,12 @@
 .root{
     -fx-background-color: bisque;
-    -fx-background-image: url("../Resources/Images/Spongebob-Backgrounds-HD-for-PC-768x614.jpg");
+    -fx-background-image: url("../Resources/Images/Spongebob-And-Patrick-Wallpaper-Backgrounds-HD-768x432.jpg");
 
 }
 
 Button {
+    -fx-font-family: "Gabriola";
     -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
     -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );

@@ -11,11 +11,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
-public class MyViewController implements IView, Initializable {
+public class newMazeController extends Controller implements IView, Initializable  {
 
-    private MazeGenerator mazeGenerator;
+//    private MazeGenerator mazeGenerator;
     @FXML
     public TextField textField_mazeRows;
     @FXML
@@ -52,29 +53,28 @@ public class MyViewController implements IView, Initializable {
         lbl_player_column.textProperty().bind(update_player_position_col);
     }
 
-    public void generateMaze()
-    {
-        if(mazeGenerator == null)
-            mazeGenerator = new MazeGenerator();
-        int rows = Integer.valueOf(textField_mazeRows.getText());
-        int cols = Integer.valueOf(textField_mazeColumns.getText());
-        int [][] maze = this.mazeGenerator.generateRandomMaze(rows,cols);
-        mazeDisplayer.drawMaze(maze);
-
-    }
+//    public void generateMaze()
+//    {
+////        if(mazeGenerator == null)
+////            mazeGenerator = new MazeGenerator();
+//        int rows = Integer.valueOf(textField_mazeRows.getText());
+//        int cols = Integer.valueOf(textField_mazeColumns.getText());
+//        int [][] maze = this.mazeGenerator.generateRandomMaze(rows,cols);
+//        mazeDisplayer.drawMaze(maze);
+//    }
 
     public void solveMaze()
     {
         showAlert("Solving Maze ... ");
     }
 
-    public void showAlert(String message)
-    {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(message);;
-        alert.show();
-    }
-
+    //in abstract
+//    public void showAlert(String message)
+//    {
+//        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//        alert.setContentText(message);;
+//        alert.show();
+//    }
 
     public void keyPressed(KeyEvent keyEvent) {
         int player_row_position = mazeDisplayer.getRow_player();
@@ -106,13 +106,15 @@ public class MyViewController implements IView, Initializable {
                 set_update_player_position_col(player_col_position +"");
 
         }
-
         keyEvent.consume();
-
     }
 
     public void mouseClicked(MouseEvent mouseEvent) {
         mazeDisplayer.requestFocus();
     }
 
+    @Override
+    public void update(Observable o, Object arg) {
+
+    }
 }

@@ -14,8 +14,8 @@ public class MazeDisplayer extends Canvas {
 
     private int [][] maze;
 
-    private int row_player =0;
-    private int col_player =0;
+    private int row_player = 0;
+    private int col_player = 0;
 
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
@@ -36,9 +36,6 @@ public class MazeDisplayer extends Canvas {
         this.imageFileNamePlayer.set(imageFileNamePlayer);
     }
 
-
-
-
     public int getRow_player() {
         return row_player;
     }
@@ -50,13 +47,8 @@ public class MazeDisplayer extends Canvas {
     public void set_player_position(int row, int col){
         this.row_player = row;
         this.col_player = col;
-
         draw();
-
     }
-
-
-
 
     public void drawMaze(int [][] maze)
     {
@@ -66,7 +58,7 @@ public class MazeDisplayer extends Canvas {
 
     public void draw()
     {
-        if( maze!=null)
+        if(maze != null)
         {
             double canvasHeight = getHeight();
             double canvasWidth = getWidth();
@@ -93,16 +85,15 @@ public class MazeDisplayer extends Canvas {
                     {
                         h = i * cellHeight;
                         w = j * cellWidth;
-                        if (wallImage == null){
-                            graphicsContext.fillRect(w,h,cellWidth,cellHeight);
-                        }else{
-                            graphicsContext.drawImage(wallImage,w,h,cellWidth,cellHeight);
+                        if (wallImage == null) {
+                            graphicsContext.fillRect(w, h, cellWidth, cellHeight);
+                        }
+                        else {
+                            graphicsContext.drawImage(wallImage, w, h, cellWidth, cellHeight);
                         }
                     }
-
                 }
             }
-
             double h_player = getRow_player() * cellHeight;
             double w_player = getCol_player() * cellWidth;
             Image playerImage = null;
@@ -111,8 +102,7 @@ public class MazeDisplayer extends Canvas {
             } catch (FileNotFoundException e) {
                 System.out.println("There is no Image player....");
             }
-            graphicsContext.drawImage(playerImage,w_player,h_player,cellWidth,cellHeight);
-
+            graphicsContext.drawImage(playerImage, w_player, h_player, cellWidth, cellHeight);
         }
     }
 }
