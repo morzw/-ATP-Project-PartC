@@ -11,7 +11,7 @@ import java.io.IOException;
 public class aboutPageController {
     public void aboutAlgo() {
         Stage algoStage = new Stage();
-        Parent root ;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("../View/algoPage.fxml"));
             algoStage.setTitle("What happens behind the scenes...");

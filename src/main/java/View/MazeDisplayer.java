@@ -19,6 +19,7 @@ public class MazeDisplayer extends Canvas {
 
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
+//    StringProperty imageFileBackground = new SimpleStringProperty();
 
     public String getImageFileNameWall() {
         return imageFileNameWall.get();
@@ -35,6 +36,14 @@ public class MazeDisplayer extends Canvas {
     public void setImageFileNamePlayer(String imageFileNamePlayer) {
         this.imageFileNamePlayer.set(imageFileNamePlayer);
     }
+
+//    public String getImageFileBackground() {
+//        return imageFileBackground.get();
+//    }
+//
+//    public void setImageFileBackground(String ImageFileBackground) {
+//        this.imageFileBackground.set(ImageFileBackground);
+//    }
 
     public int getRow_player() {
         return row_player;
@@ -67,9 +76,16 @@ public class MazeDisplayer extends Canvas {
             double cellHeight = canvasHeight/row;
             double cellWidth = canvasWidth/col;
             GraphicsContext graphicsContext = getGraphicsContext2D();
-            graphicsContext.clearRect(0,0,canvasWidth,canvasHeight);
+//            Image backgroundImage = null;
+//            try {
+//                backgroundImage = new Image(new FileInputStream("./resources/Images/background1.jpg"));
+//            } catch (FileNotFoundException e) {
+//                System.out.println("There is no file....");
+//            }
+//            graphicsContext.drawImage(backgroundImage, 0, 0, canvasWidth, canvasHeight);
+            graphicsContext.clearRect(0,0, canvasWidth, canvasHeight);
             graphicsContext.setFill(Color.RED);
-            double w,h;
+            double w, h;
             //Draw Maze
             Image wallImage = null;
             try {
