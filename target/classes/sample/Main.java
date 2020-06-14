@@ -14,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        MyModel model = MyModel.getInstance(); //??
+        MyModel model = MyModel.getInstance();
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
 
