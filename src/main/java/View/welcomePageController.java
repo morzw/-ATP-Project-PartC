@@ -25,12 +25,12 @@ public class welcomePageController extends Controller {
     public Label exitLable;
 
     public void handleNewFile(ActionEvent actionEvent) {
-        //changeScene("../View/newMazePage.fxml"); //newMaze
+        //changeScene("../View/MyView.fxml"); //newMaze
 
 
 //        Parent root;
 //        try {
-//            root = FXMLLoader.load(getClass().getResource("../View/newMazePage.fxml"));
+//            root = FXMLLoader.load(getClass().getResource("../View/MyView.fxml"));
 //            Stage welcome = (Stage)(newMaze.getParentPopup().getScene().getWindow());
 //            welcome.setTitle("newMaze");
 //            welcome.setScene(new Scene(root, 768, 614));

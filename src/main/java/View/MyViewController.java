@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
-public class newMazeController extends Controller implements IView, Initializable  {
+public class MyViewController extends Controller implements IView, Initializable  {
 
 //    private MazeGenerator mazeGenerator;
     @FXML
