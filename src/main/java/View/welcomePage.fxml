@@ -25,10 +25,10 @@
                         <MenuItem mnemonicParsing="false" text="Properties" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="Exit">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Label fx:id="exitLable" onMouseClicked="#handleExit" text="Exit" />
+                     </graphic>
                   </Menu>
                 <Menu mnemonicParsing="false">
                      <graphic>

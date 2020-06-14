@@ -53,15 +53,15 @@ public class newMazeController extends Controller implements IView, Initializabl
         lbl_player_column.textProperty().bind(update_player_position_col);
     }
 
-//    public void generateMaze()
-//    {
-////        if(mazeGenerator == null)
-////            mazeGenerator = new MazeGenerator();
+    public void generateMaze()
+    {
+//        if(mazeGenerator == null)
+//            mazeGenerator = new MazeGenerator();
 //        int rows = Integer.valueOf(textField_mazeRows.getText());
 //        int cols = Integer.valueOf(textField_mazeColumns.getText());
 //        int [][] maze = this.mazeGenerator.generateRandomMaze(rows,cols);
 //        mazeDisplayer.drawMaze(maze);
-//    }
+    }
 
     public void solveMaze()
     {
