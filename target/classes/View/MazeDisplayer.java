@@ -13,13 +13,22 @@ import java.io.FileNotFoundException;
 public class MazeDisplayer extends Canvas {
 
     private int [][] maze;
-
-    private int row_player = 0;
-    private int col_player = 0;
+    private int row_player;
+    private int col_player;
+    private int row_goal;
+    private int col_goal;
 
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
-//    StringProperty imageFileBackground = new SimpleStringProperty();
+    StringProperty imageFileNameTarget = new SimpleStringProperty();
+
+    public String getImageFileNameTarget() {
+        return imageFileNameTarget.get();
+    }
+
+    public void setImageFileNameTarget(String imageFileNameTarget) {
+        this.imageFileNameTarget.set(imageFileNameTarget);
+    }
 
     public String getImageFileNameWall() {
         return imageFileNameWall.get();
@@ -37,14 +46,6 @@ public class MazeDisplayer extends Canvas {
         this.imageFileNamePlayer.set(imageFileNamePlayer);
     }
 
-//    public String getImageFileBackground() {
-//        return imageFileBackground.get();
-//    }
-//
-//    public void setImageFileBackground(String ImageFileBackground) {
-//        this.imageFileBackground.set(ImageFileBackground);
-//    }
-
     public int getRow_player() {
         return row_player;
     }
@@ -53,10 +54,27 @@ public class MazeDisplayer extends Canvas {
         return col_player;
     }
 
-    public void set_player_position(int row, int col){
+    public void set_player_position(int row, int col) {
         this.row_player = row;
         this.col_player = col;
         draw();
+    }
+
+    public int getRow_goal() { return row_goal; }
+
+    public int getCol_goal() { return col_goal; }
+
+    public void set_goal_position(int row, int col) {
+        this.row_goal = row;
+        this.col_goal = col;
+    }
+
+    public int[][] getMaze() {
+        return maze;
+    }
+
+    public void setMaze(int[][] maze) {
+        this.maze = maze;
     }
 
     public void drawMaze(int [][] maze)
@@ -76,13 +94,6 @@ public class MazeDisplayer extends Canvas {
             double cellHeight = canvasHeight/row;
             double cellWidth = canvasWidth/col;
             GraphicsContext graphicsContext = getGraphicsContext2D();
-//            Image backgroundImage = null;
-//            try {
-//                backgroundImage = new Image(new FileInputStream("./resources/Images/background1.jpg"));
-//            } catch (FileNotFoundException e) {
-//                System.out.println("There is no file....");
-//            }
-//            graphicsContext.drawImage(backgroundImage, 0, 0, canvasWidth, canvasHeight);
             graphicsContext.clearRect(0,0, canvasWidth, canvasHeight);
             graphicsContext.setFill(Color.RED);
             double w, h;
@@ -97,7 +108,7 @@ public class MazeDisplayer extends Canvas {
             {
                 for(int j=0;j<col;j++)
                 {
-                    if(maze[i][j] == 1) // Wall
+                    if(maze[i][j] == 1) //Wall
                     {
                         h = i * cellHeight;
                         w = j * cellWidth;
@@ -110,6 +121,7 @@ public class MazeDisplayer extends Canvas {
                     }
                 }
             }
+            //Player
             double h_player = getRow_player() * cellHeight;
             double w_player = getCol_player() * cellWidth;
             Image playerImage = null;
@@ -119,6 +131,16 @@ public class MazeDisplayer extends Canvas {
                 System.out.println("There is no Image player....");
             }
             graphicsContext.drawImage(playerImage, w_player, h_player, cellWidth, cellHeight);
+            //Target
+            double h_target = getRow_goal() * cellHeight;
+            double w_target = getCol_goal() * cellWidth;
+            Image targetImage = null;
+            try {
+                targetImage = new Image(new FileInputStream(getImageFileNameTarget()));
+            } catch (FileNotFoundException e) {
+                System.out.println("There is no Image player....");
+            }
+            graphicsContext.drawImage(targetImage, w_target, h_target, cellWidth, cellHeight);
         }
     }
 }

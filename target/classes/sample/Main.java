@@ -18,7 +18,7 @@ public class Main extends Application {
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
 
-        Parent root = FXMLLoader.load(getClass().getResource("../View/welcomePage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../View/MyView.fxml"));
         primaryStage.setTitle("MorGalMaze");
         primaryStage.setScene(new Scene(root, 768, 614));
         primaryStage.show();

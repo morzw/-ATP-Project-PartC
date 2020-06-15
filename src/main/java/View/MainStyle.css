@@ -1,7 +1,8 @@
 .root{
     -fx-background-color: bisque;
-    -fx-background-image: url("../Resources/Images/Spongebob-Backgrounds-HD-for-PC-768x614.jpg");
-
+    /*-fx-background-image: url('C:\Users\morzw\IdeaProjects\ATP-Project-PartC\resources\Images\background1.jpg');*/
+    /*-fx-background-repeat: stretch;*/
+    /*-fx-background-size: cover;*/
 }
 
 Button {

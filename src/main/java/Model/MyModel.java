@@ -24,9 +24,33 @@ public class MyModel extends Observable implements IModel {
     private Server mazeGeneratingServer;
     private Server solveSearchProblemServer;
     private Maze maze;
-    private int currPosRow;
-    private int currPosCol;
+    private int[][] mazeArray;
+    private int startPosRow;
+    private int startPosCol;
+    private int goalPosRow;
+    private int goalPosCol;
     private ArrayList<AState> mazeSolutionSteps;
+    private ArrayList<int[][]> solution;
+
+    public int[][] getMazeArray() {
+        return mazeArray;
+    }
+
+    public int getStartPosRow() {
+        return startPosRow;
+    }
+
+    public int getStartPosCol() {
+        return startPosCol;
+    }
+
+    public int getGoalPosRow() {
+        return goalPosRow;
+    }
+
+    public int getGoalPosCol() {
+        return goalPosCol;
+    }
 
     //constructor
     private MyModel() {
@@ -34,8 +58,6 @@ public class MyModel extends Observable implements IModel {
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         mazeGeneratingServer.start();
         solveSearchProblemServer.start();
-//        mazeGeneratingServer.stop();
-//        solveSearchProblemServer.stop();
     }
 
     //get instance
@@ -49,8 +71,13 @@ public class MyModel extends Observable implements IModel {
     @Override
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
-        currPosRow = maze.getStartPosition().getRowIndex();
-        currPosCol = maze.getStartPosition().getColumnIndex();
+        mazeArray = maze.getMaze();
+        startPosRow = maze.getStartPosition().getRowIndex();
+        startPosCol = maze.getStartPosition().getColumnIndex();
+        goalPosRow = maze.getGoalPosition().getRowIndex();
+        goalPosCol = maze.getGoalPosition().getColumnIndex();
+        setChanged();
+        notifyObservers("generate");
     }
 
     private void CommunicateWithServer_MazeGenerating(int row, int col) {
@@ -71,7 +98,6 @@ public class MyModel extends Observable implements IModel {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
@@ -82,6 +108,8 @@ public class MyModel extends Observable implements IModel {
     @Override
     public void solveMaze() {
         CommunicateWithServer_SolveSearchProblem();
+        setChanged();
+        notifyObservers("solve");
     }
 
     private void CommunicateWithServer_SolveSearchProblem() {
@@ -105,4 +133,9 @@ public class MyModel extends Observable implements IModel {
         }
     }
 
+    @Override
+    public void stopServers() {
+        mazeGeneratingServer.stop();
+        solveSearchProblemServer.stop();
+    }
 }

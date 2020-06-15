@@ -9,7 +9,32 @@ import java.util.Observer;
 public class MyViewModel extends Observable implements Observer {
 
     private static MyViewModel myViewModel;
-    private IModel model;
+    private MyModel model;
+    private int[][] mazeArray;
+    private int startPosRow;
+    private int startPosCol;
+    private int goalPosRow;
+    private int goalPosCol;
+
+    public int[][] getMazeArray() {
+        return mazeArray;
+    }
+
+    public int getStartPosRow() {
+        return startPosRow;
+    }
+
+    public int getStartPosCol() {
+        return startPosCol;
+    }
+
+    public int getGoalPosRow() {
+        return goalPosRow;
+    }
+
+    public int getGoalPosCol() {
+        return goalPosCol;
+    }
 
     //constructor
     private MyViewModel() {
@@ -26,7 +51,17 @@ public class MyViewModel extends Observable implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-
+        if (o == model) {
+            if (arg == "generate") {
+                mazeArray = model.getMazeArray();
+                startPosRow = model.getStartPosRow();
+                startPosCol = model.getStartPosCol();
+                goalPosRow = model.getGoalPosRow();
+                goalPosCol = model.getGoalPosCol();
+                setChanged();
+                notifyObservers("generate");
+            }
+        }
     }
 
     //generate maze
