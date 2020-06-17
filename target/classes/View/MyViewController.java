@@ -11,6 +11,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
@@ -81,7 +82,12 @@ public class MyViewController extends Controller implements IView, Initializable
 
     public void solveMaze()
     {
-        showAlert("Solving Maze ... ");
+        //try to solve null maze
+        if (mazeDisplayer.getMaze()==null)
+            showErrorAlert("There is no maze to solve :(" +
+                    "\nPlease click on the new maze or load maze button first.");
+        else
+            viewModel.solve();
     }
 
     //move character
@@ -126,10 +132,9 @@ public class MyViewController extends Controller implements IView, Initializable
     @Override
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
-            if (arg == "generate") {
+            if (arg == "update") {
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
-//                mazeDisplayer.set_player_position(viewModel.getStartPosRow(), viewModel.getStartPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
             }
@@ -139,16 +144,9 @@ public class MyViewController extends Controller implements IView, Initializable
                 else
                     mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
             }
+            //solve
             else if (arg == "solve") {
-
-            }
-            //check?
-            else if (arg == "generate" || arg == "load") {
-                mazeDisplayer.setMaze(viewModel.getMazeArray());
-                mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
-//                mazeDisplayer.set_player_position(viewModel.getStartPosRow(), viewModel.getStartPosCol());
-                mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
-                mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
+                mazeDisplayer.drawSol(viewModel.getSolution());
             }
         }
     }

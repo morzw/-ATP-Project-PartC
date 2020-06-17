@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,12 +15,18 @@ public abstract class Controller implements Observer {
 
     protected MyViewModel viewModel = MyViewModel.getInstance();
 
+
     //changes the scene
     public void changeScene(String fxmlPath, Stage stage, String title)
     {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            //
+//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
+//            fxmlLoader.load();
+//            viewModel.addObserver(fxmlLoader.getController());
+
             stage.setTitle(title);
             stage.setScene(new Scene(root, 700, 500));
             stage.show();

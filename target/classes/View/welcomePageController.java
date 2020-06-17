@@ -20,13 +20,12 @@ import java.util.Observable;
 
 public class WelcomePageController extends Controller {
 
-    //   <fx:include source="WelcomePage.fxml"/>
     public MenuBar menuBar;
     public Label exitLable;
     //public Window welcomeStage = menuBar.getScene().getWindow(); check?
 
-    public void handleNewFile(ActionEvent actionEvent) {
 
+    public void handleNewFile(ActionEvent actionEvent) {
         changeScene("../View/MyView.fxml",(Stage)menuBar.getScene().getWindow(),"New Maze");
     }
 
@@ -49,16 +48,6 @@ public class WelcomePageController extends Controller {
     }
 
     public void handleAbout() {
-//        Stage aboutStage = new Stage();
-//        Parent root;
-//        try {
-//            root = FXMLLoader.load(getClass().getResource("../View/AboutPage.fxml"));
-//            aboutStage.setTitle("About...");
-//            aboutStage.setScene(new Scene(root, 768, 432));
-//            aboutStage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         changeScene("../View/AboutPage.fxml",(Stage)menuBar.getScene().getWindow(),"About");
     }
 
@@ -70,6 +59,7 @@ public class WelcomePageController extends Controller {
         );
     }
 
+    //need to stop servers
     public void handleExit() {
         Window welcome = exitLable.getScene().getWindow();
         ((Stage)welcome).close();
@@ -86,6 +76,7 @@ public class WelcomePageController extends Controller {
             else if (arg == "load")
             {
                 //in MyViewController
+                //change scene to myView
             }
         }
     }

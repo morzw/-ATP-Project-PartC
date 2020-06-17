@@ -15,9 +15,9 @@ public class Main extends Application {
         MyModel model = MyModel.getInstance();
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
-
+       //View/MyView.fxml
         Parent root = FXMLLoader.load(getClass().getResource("../View/WelcomePage.fxml"));
-        primaryStage.setTitle("MorGalMaze");
+        primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
         //primaryStage.setScene(new Scene(root, 768, 614));
         primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();

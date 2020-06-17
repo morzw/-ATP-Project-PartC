@@ -11,6 +11,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
@@ -53,7 +54,7 @@ public class MyViewController extends Controller implements IView, Initializable
     }
 
     //validation check for generate maze
-    public boolean isValidNumber(String str)
+    private boolean isValidNumber(String str)
     {
         String regex = "\\d+";
         if (str.matches(regex)) {
@@ -81,7 +82,12 @@ public class MyViewController extends Controller implements IView, Initializable
 
     public void solveMaze()
     {
-        showAlert("Solving Maze ... ");
+        //try to solve null maze
+        if (mazeDisplayer.getMaze()==null)
+            showErrorAlert("There is no maze to solve :(" +
+                    "\nPlease click on the new maze or load maze button first.");
+        else
+            viewModel.solve();
     }
 
     //move character
@@ -138,8 +144,9 @@ public class MyViewController extends Controller implements IView, Initializable
                 else
                     mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
             }
+            //solve
             else if (arg == "solve") {
-
+                mazeDisplayer.drawSol(viewModel.getSolution());
             }
         }
     }

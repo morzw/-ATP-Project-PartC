@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class MazeDisplayer extends Canvas {
 
@@ -18,9 +19,25 @@ public class MazeDisplayer extends Canvas {
     private int row_goal;
     private int col_goal;
 
+    private boolean isSolved;
+    private ArrayList<int[]> solution;
+
+//    public void setSolved(boolean solved) {
+//        isSolved = solved;
+//    }
+
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
     StringProperty imageFileNameTarget = new SimpleStringProperty();
+    StringProperty imageFileNameSol = new SimpleStringProperty();
+
+    public String getImageFileNameSol() {
+        return imageFileNameSol.get();
+    }
+
+    public void setImageFileNameSol(String imageFileNameSol) {
+        this.imageFileNameSol.set(imageFileNameSol);
+    }
 
     public String getImageFileNameTarget() {
         return imageFileNameTarget.get();
@@ -144,6 +161,31 @@ public class MazeDisplayer extends Canvas {
                 System.out.println("There is no Image player....");
             }
             graphicsContext.drawImage(targetImage, w_target, h_target, cellWidth, cellHeight);
+            //Draw Sol
+            if (isSolved)
+            {
+                Image solImage = null;
+                try {
+                    solImage = new Image(new FileInputStream(getImageFileNameSol()));
+                } catch (FileNotFoundException e) {
+                    System.out.println("There is no file....");
+                }
+                double hSol,wSol;
+                for (int [] state: solution) {
+                    hSol = state[0] * cellHeight;
+                    wSol = state[1] * cellWidth;
+                    if (solImage == null)
+                        graphicsContext.fillRect(wSol, hSol, cellWidth, cellHeight);
+                    else
+                        graphicsContext.drawImage(solImage, wSol, hSol, cellWidth, cellHeight);
+                }
+            }
         }
+    }
+
+    public void drawSol(ArrayList<int[]> sol) {
+        isSolved = true;
+        solution = sol;
+        draw();
     }
 }

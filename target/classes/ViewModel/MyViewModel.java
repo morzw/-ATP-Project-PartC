@@ -4,6 +4,7 @@ import Model.IModel;
 import Model.MyModel;
 import javafx.scene.input.KeyEvent;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -12,25 +13,21 @@ public class MyViewModel extends Observable implements Observer {
     private static MyViewModel myViewModel;
     private MyModel model;
     private int[][] mazeArray;
-//    private int startPosRow;
-//    private int startPosCol;
     private int goalPosRow;
     private int goalPosCol;
     private int currPosRow;
     private int currPosCol;
     private boolean wonGame;
 
+    private ArrayList<int[]> solution;
+
+    public ArrayList<int[]> getSolution() {
+        return solution;
+    }
+
     public int[][] getMazeArray() {
         return mazeArray;
     }
-
-//    public int getStartPosRow() {
-//        return startPosRow;
-//    }
-//
-//    public int getStartPosCol() {
-//        return startPosCol;
-//    }
 
     public int getCurrPosRow() { return currPosRow; }
 
@@ -62,16 +59,14 @@ public class MyViewModel extends Observable implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         if (o instanceof MyModel) {
-            if (arg == "generate") {
+            if (arg == "generate" || arg == "load") {
                 mazeArray = model.getMazeArray();
-//                startPosRow = model.getStartPosRow();
-//                startPosCol = model.getStartPosCol();
                 currPosRow = model.getCurrPosRow();
                 currPosCol = model.getCurrPosCol();
                 goalPosRow = model.getGoalPosRow();
                 goalPosCol = model.getGoalPosCol();
                 setChanged();
-                notifyObservers("generate");
+                notifyObservers("update");
             }
             else if (arg == "move") {
                 currPosRow = model.getCurrPosRow();
@@ -80,19 +75,18 @@ public class MyViewModel extends Observable implements Observer {
                 setChanged();
                 notifyObservers("move");
             }
-            else if (arg == "solve") {
+            //solve-instead of save the sol in viewModel and view
+            else if (arg == "solve")
+            {
+                solution = model.getSol();
                 setChanged();
                 notifyObservers("solve");
             }
             else if (arg == "save")
             {
+
                 setChanged();
-                notifyObservers("maze");
-            }
-            else if (arg == "load")
-            {
-                setChanged();
-                notifyObservers("load");
+                notifyObservers("save");
             }
         }
     }
@@ -133,5 +127,9 @@ public class MyViewModel extends Observable implements Observer {
                 break;
         }
         model.updateCharacterLocation(direction);
+    }
+
+    public void solve() {
+        model.solveMaze();
     }
 }

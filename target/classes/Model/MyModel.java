@@ -8,6 +8,7 @@ import Server.ServerStrategyGenerateMaze;
 import Server.ServerStrategySolveSearchProblem;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
+import algorithms.search.SearchableMaze;
 import algorithms.search.Solution;
 
 import java.io.*;
@@ -25,25 +26,17 @@ public class MyModel extends Observable implements IModel {
     private int[][] mazeArray;
     private int currPosRow;
     private int currPosCol;
-//    private int startPosRow;
-//    private int startPosCol;
     private int goalPosRow;
     private int goalPosCol;
     private boolean wonGame;
     private ArrayList<AState> mazeSolutionSteps;
-    private ArrayList<int[][]> solution;
+    private ArrayList<int[]> sol;
+    //
+    private SearchableMaze sMaze;
 
     public int[][] getMazeArray() {
         return mazeArray;
     }
-
-//    public int getStartPosRow() {
-//        return startPosRow;
-//    }
-//
-//    public int getStartPosCol() {
-//        return startPosCol;
-//    }
 
     public int getGoalPosRow() {
         return goalPosRow;
@@ -75,6 +68,10 @@ public class MyModel extends Observable implements IModel {
         return myModel;
     }
 
+    public ArrayList<int[]> getSol() {
+        return sol;
+    }
+
     @Override
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
@@ -84,8 +81,6 @@ public class MyModel extends Observable implements IModel {
         goalPosRow = maze.getGoalPosition().getRowIndex();
         goalPosCol = maze.getGoalPosition().getColumnIndex();
         wonGame = false;
-//        currPosRow = startPosRow;
-//        currPosCol = startPosCol;
         setChanged();
         notifyObservers("generate");
     }
@@ -117,9 +112,32 @@ public class MyModel extends Observable implements IModel {
 
     @Override
     public void solveMaze() {
+        sol = new ArrayList<int[]>();
         CommunicateWithServer_SolveSearchProblem();
+        //updates sol
+        for (AState state:mazeSolutionSteps) {
+            int[] currPosState = new int[2];
+            currPosState[0] = getRowState(state);
+            currPosState[1] = getColState(state);
+            sol.add(currPosState);
+        }
         setChanged();
         notifyObservers("solve");
+    }
+
+    //from partB - change to public and add new jar
+    private int getRowState(AState state)
+    {
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        return row;
+    }
+
+    private int getColState(AState state)
+    {
+        int index = state.getName().indexOf(",");
+        int col = Integer.parseInt(state.getName().substring(index+1));
+        return col;
     }
 
     private void CommunicateWithServer_SolveSearchProblem() {
@@ -141,12 +159,6 @@ public class MyModel extends Observable implements IModel {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void stopServers() {
-        mazeGeneratingServer.stop();
-        solveSearchProblemServer.stop();
     }
 
     //need to add diagonal moves!!!
@@ -222,5 +234,11 @@ public class MyModel extends Observable implements IModel {
         } catch (IOException|ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void stopServers() {
+        mazeGeneratingServer.stop();
+        solveSearchProblemServer.stop();
     }
 }

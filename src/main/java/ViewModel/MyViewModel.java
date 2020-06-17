@@ -4,6 +4,7 @@ import Model.IModel;
 import Model.MyModel;
 import javafx.scene.input.KeyEvent;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -17,6 +18,12 @@ public class MyViewModel extends Observable implements Observer {
     private int currPosRow;
     private int currPosCol;
     private boolean wonGame;
+
+    private ArrayList<int[]> solution;
+
+    public ArrayList<int[]> getSolution() {
+        return solution;
+    }
 
     public int[][] getMazeArray() {
         return mazeArray;
@@ -68,14 +75,18 @@ public class MyViewModel extends Observable implements Observer {
                 setChanged();
                 notifyObservers("move");
             }
-            else if (arg == "solve") {
+            //solve-instead of save the sol in viewModel and view
+            else if (arg == "solve")
+            {
+                solution = model.getSol();
                 setChanged();
                 notifyObservers("solve");
             }
             else if (arg == "save")
             {
+
                 setChanged();
-                notifyObservers("maze");
+                notifyObservers("save");
             }
         }
     }
@@ -116,5 +127,14 @@ public class MyViewModel extends Observable implements Observer {
                 break;
         }
         model.updateCharacterLocation(direction);
+    }
+
+    public void solve() {
+        model.solveMaze();
+    }
+
+    public void exit()
+    {
+        model.stopServers();
     }
 }
