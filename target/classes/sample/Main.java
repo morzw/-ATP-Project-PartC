@@ -1,8 +1,6 @@
 package sample;
 
-import Model.IModel;
 import Model.MyModel;
-import View.IView;
 import ViewModel.MyViewModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,9 +16,10 @@ public class Main extends Application {
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
 
-        Parent root = FXMLLoader.load(getClass().getResource("../View/MyView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../View/WelcomePage.fxml"));
         primaryStage.setTitle("MorGalMaze");
-        primaryStage.setScene(new Scene(root, 768, 614));
+        //primaryStage.setScene(new Scene(root, 768, 614));
+        primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();
     }
 

@@ -1,18 +1,21 @@
-#pane{
-    -fx-background-image: url("../Resources/Images/Spongebob-Backgrounds-HD-for-PC-768x614.jpg");
+#wPane{
+    -fx-background-image: url("/Images/WelcomeBackground.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
+
 .headers{
     -fx-effect: dropshadow(gaussian, black, 1.5, 2, 1.5, 2);
 }
+
 MenuBar{
     -fx-background-color: rgba(76, 69, 182, 0.7) ;
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
 }
+
 .menuBars{
     -fx-text-fill: white;
 }
@@ -25,9 +28,11 @@ MenuBar{
 .hints{
     -fx-background-color: #496F81;
 }
+
 .hints > *.button-bar > *.container{
     -fx-background-color: #496F81;
 }
+
 .hints > *.label.content{
     -fx-font-size: 14px;
     -fx-font-weight: bold;
@@ -36,6 +41,7 @@ MenuBar{
 .hints *.header-panel{
     -fx-background-color: #97C3D8;
 }
+
 .hints *.header-panel *.label{
     -fx-font-size: 18px;
     -fx-font-style: italic;
@@ -50,4 +56,3 @@ BorderPane{
     -fx-border-color: black;
     -fx-border-width: 5px;
 }
-

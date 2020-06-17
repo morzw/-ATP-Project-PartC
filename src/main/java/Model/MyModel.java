@@ -1,6 +1,5 @@
 package Model;
 
-
 import Client.Client;
 import Client.IClientStrategy;
 import IO.MyDecompressorInputStream;
@@ -8,7 +7,6 @@ import Server.Server;
 import Server.ServerStrategyGenerateMaze;
 import Server.ServerStrategySolveSearchProblem;
 import algorithms.mazeGenerators.Maze;
-import algorithms.mazeGenerators.MyMazeGenerator;
 import algorithms.search.AState;
 import algorithms.search.Solution;
 
@@ -25,23 +23,16 @@ public class MyModel extends Observable implements IModel {
     private Server solveSearchProblemServer;
     private Maze maze;
     private int[][] mazeArray;
-    private int startPosRow;
-    private int startPosCol;
+    private int currPosRow;
+    private int currPosCol;
     private int goalPosRow;
     private int goalPosCol;
+    private boolean wonGame;
     private ArrayList<AState> mazeSolutionSteps;
     private ArrayList<int[][]> solution;
 
     public int[][] getMazeArray() {
         return mazeArray;
-    }
-
-    public int getStartPosRow() {
-        return startPosRow;
-    }
-
-    public int getStartPosCol() {
-        return startPosCol;
     }
 
     public int getGoalPosRow() {
@@ -51,6 +42,12 @@ public class MyModel extends Observable implements IModel {
     public int getGoalPosCol() {
         return goalPosCol;
     }
+
+    public int getCurrPosRow() { return currPosRow; }
+
+    public int getCurrPosCol() { return currPosCol; }
+
+    public boolean isWonGame() { return wonGame; }
 
     //constructor
     private MyModel() {
@@ -72,10 +69,11 @@ public class MyModel extends Observable implements IModel {
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
         mazeArray = maze.getMaze();
-        startPosRow = maze.getStartPosition().getRowIndex();
-        startPosCol = maze.getStartPosition().getColumnIndex();
+        currPosRow = maze.getStartPosition().getRowIndex();
+        currPosCol = maze.getStartPosition().getColumnIndex();
         goalPosRow = maze.getGoalPosition().getRowIndex();
         goalPosCol = maze.getGoalPosition().getColumnIndex();
+        wonGame = false;
         setChanged();
         notifyObservers("generate");
     }
@@ -137,5 +135,80 @@ public class MyModel extends Observable implements IModel {
     public void stopServers() {
         mazeGeneratingServer.stop();
         solveSearchProblemServer.stop();
+    }
+
+    //need to add diagonal moves!!!
+    @Override
+    public void updateCharacterLocation(int direction)
+    {
+        /*
+            direction = 1 -> Up
+            direction = 2 -> Down
+            direction = 3 -> Left
+            direction = 4 -> Right
+         */
+        switch(direction)
+        {
+            case 1: //Up
+                if (isValidMove(currPosRow-1, currPosCol))
+                    currPosRow--;
+                break;
+
+            case 2: //Down
+                if (isValidMove(currPosRow+1, currPosCol))
+                    currPosRow++;
+                break;
+            case 3: //Left
+                if (isValidMove(currPosRow, currPosCol-1))
+                    currPosCol--;
+                break;
+            case 4: //Right
+                if (isValidMove(currPosRow, currPosCol+1))
+                    currPosCol++;
+                break;
+        }
+        //check if won the game
+        if (currPosRow == goalPosRow && currPosCol == goalPosCol)
+            wonGame = true;
+        //set & notify
+        setChanged();
+        notifyObservers("move");
+    }
+
+    //checks if the player's move is valid
+    public boolean isValidMove(int wantedRow, int wantedCol) {
+        if (wantedRow < 0 || wantedRow >= mazeArray.length ||
+                wantedCol < 0 || wantedCol >= mazeArray[0].length || mazeArray[wantedRow][wantedCol] == 1)
+            return false;
+        return true;
+    }
+
+    @Override
+    public void saveMazeToFile(String filePath) {
+        try {
+            FileOutputStream file = new FileOutputStream(filePath);
+            ObjectOutputStream output = new ObjectOutputStream(file);
+            output.writeObject(maze);
+            output.flush();
+            output.close();
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //check if to save maze to the curr maze , save player location?
+    @Override
+    public void loadUserMaze(String filePath) {
+        try {
+            FileInputStream file = new FileInputStream(filePath);
+            ObjectInputStream input = new ObjectInputStream(file);
+            maze = (Maze)input.readObject();
+            file.close();
+            setChanged();
+            notifyObservers("load");
+        } catch (IOException|ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

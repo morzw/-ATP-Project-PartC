@@ -1,8 +1,10 @@
 .root{
-    -fx-background-color: bisque;
-    /*-fx-background-image: url('C:\Users\morzw\IdeaProjects\ATP-Project-PartC\resources\Images\background1.jpg');*/
-    /*-fx-background-repeat: stretch;*/
-    /*-fx-background-size: cover;*/
+    /*-fx-background-color: lightblue;*/
+    -fx-background-image: url("/Images/background3.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
 
 Button {

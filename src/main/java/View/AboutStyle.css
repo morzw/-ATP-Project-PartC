@@ -1,11 +1,14 @@
-.root{
-    -fx-background-color: bisque;
-    -fx-background-image: url("../Resources/Images/Spongebob-And-Patrick-Wallpaper-Backgrounds-HD-768x432.jpg");
-
+#pane{
+    -fx-background-image: url("/Images/AboutBackground.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
 
 Button {
     -fx-font-family: "Gabriola";
+    -fx-font-size: 30px;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-background-color: linear-gradient(#61a2b1, #2A5058);

@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -71,12 +70,13 @@ public class MyViewController extends Controller implements IView, Initializable
         viewModel.addObserver(this);
         String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
-        while (!isValidNumber(strRows) || !isValidNumber(strCols)) {
-            showErrorAlert("Values inserted aren't valid! Please enter only numbers that are greater than 1 (:");
+        if (isValidNumber(strRows) && isValidNumber(strCols)) {
+            int rows = Integer.valueOf(strRows);
+            int cols = Integer.valueOf(strCols);
+            viewModel.generateMaze(rows, cols);
         }
-        int rows = Integer.valueOf(strRows);
-        int cols = Integer.valueOf(strCols);
-        viewModel.generateMaze(rows, cols);
+        else
+            showErrorAlert("Values inserted aren't valid! Please enter only numbers that are greater than 1 and smaller than 501 (:");
     }
 
     public void solveMaze()
@@ -84,36 +84,38 @@ public class MyViewController extends Controller implements IView, Initializable
         showAlert("Solving Maze ... ");
     }
 
+    //move character
     public void keyPressed(KeyEvent keyEvent) {
-        int player_row_position = mazeDisplayer.getRow_player();
-        int player_col_position = mazeDisplayer.getCol_player();
-        switch (keyEvent.getCode()){
-            case UP:
-                mazeDisplayer.set_player_position(player_row_position-1,player_col_position);
-                set_update_player_position_row(player_row_position-1 + "");
-                set_update_player_position_col(player_col_position + "");
-                break;
-            case DOWN:
-                mazeDisplayer.set_player_position(player_row_position+1,player_col_position);
-                set_update_player_position_row(player_row_position+1 + "");
-                set_update_player_position_col(player_col_position + "");
-                break;
-            case RIGHT:
-                mazeDisplayer.set_player_position(player_row_position,player_col_position+1);
-                set_update_player_position_row(player_row_position +"");
-                set_update_player_position_col(player_col_position+1 +"");
-                break;
-            case LEFT:
-                mazeDisplayer.set_player_position(player_row_position,player_col_position-1);
-                set_update_player_position_row(player_row_position +"");
-                set_update_player_position_col(player_col_position-1 +"");
-                break;
-            default:
-                mazeDisplayer.set_player_position(player_row_position,player_col_position);
-                set_update_player_position_row(player_row_position +"");
-                set_update_player_position_col(player_col_position +"");
-
-        }
+//        int player_row_position = mazeDisplayer.getRow_player();
+//        int player_col_position = mazeDisplayer.getCol_player();
+//        switch (keyEvent.getCode()){
+//            case UP:
+//                mazeDisplayer.set_player_position(player_row_position-1,player_col_position);
+//                set_update_player_position_row(player_row_position-1 + "");
+//                set_update_player_position_col(player_col_position + "");
+//                break;
+//            case DOWN:
+//                mazeDisplayer.set_player_position(player_row_position+1,player_col_position);
+//                set_update_player_position_row(player_row_position+1 + "");
+//                set_update_player_position_col(player_col_position + "");
+//                break;
+//            case RIGHT:
+//                mazeDisplayer.set_player_position(player_row_position,player_col_position+1);
+//                set_update_player_position_row(player_row_position +"");
+//                set_update_player_position_col(player_col_position+1 +"");
+//                break;
+//            case LEFT:
+//                mazeDisplayer.set_player_position(player_row_position,player_col_position-1);
+//                set_update_player_position_row(player_row_position +"");
+//                set_update_player_position_col(player_col_position-1 +"");
+//                break;
+//            default:
+//                mazeDisplayer.set_player_position(player_row_position,player_col_position);
+//                set_update_player_position_row(player_row_position +"");
+//                set_update_player_position_col(player_col_position +"");
+//
+//        }
+        viewModel.moveCharacter(keyEvent);
         keyEvent.consume();
     }
 
@@ -123,11 +125,29 @@ public class MyViewController extends Controller implements IView, Initializable
 
     @Override
     public void update(Observable o, Object arg) {
-        if (o == viewModel) {
+        if (o instanceof MyViewModel) {
             if (arg == "generate") {
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
-                mazeDisplayer.set_player_position(viewModel.getStartPosRow(), viewModel.getStartPosCol());
+//                mazeDisplayer.set_player_position(viewModel.getStartPosRow(), viewModel.getStartPosCol());
+                mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
+                mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
+            }
+            else if (arg == "move") {
+                if (viewModel.isWonGame() == true)
+                    showAlert("YOU WON!");
+                else
+                    mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
+            }
+            else if (arg == "solve") {
+
+            }
+            //check?
+            else if (arg == "generate" || arg == "load") {
+                mazeDisplayer.setMaze(viewModel.getMazeArray());
+                mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
+//                mazeDisplayer.set_player_position(viewModel.getStartPosRow(), viewModel.getStartPosCol());
+                mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
             }
         }

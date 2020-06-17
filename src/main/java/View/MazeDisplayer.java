@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 
 public class MazeDisplayer extends Canvas {
 
-    private int [][] maze;
+    private int[][] maze;
     private int row_player;
     private int col_player;
     private int row_goal;
@@ -95,7 +95,10 @@ public class MazeDisplayer extends Canvas {
             double cellWidth = canvasWidth/col;
             GraphicsContext graphicsContext = getGraphicsContext2D();
             graphicsContext.clearRect(0,0, canvasWidth, canvasHeight);
-            graphicsContext.setFill(Color.RED);
+            graphicsContext.strokeRect(0,0, canvasWidth, canvasHeight);
+            graphicsContext.setStroke(Color.BLACK);
+            graphicsContext.setLineWidth(2);
+            graphicsContext.stroke();
             double w, h;
             //Draw Maze
             Image wallImage = null;

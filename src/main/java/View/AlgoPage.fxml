@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@welcome.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.algoPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Welcome.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AlgoPageController">
    <children>
       <Text layoutX="66.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to generate SpongeBob's maze we used Prim's algorithm and we are solving the maze by using Bredth First seacrth. If you are interested you can find more information here :)" textAlignment="CENTER" wrappingWidth="433.4700622558594">
          <font>
