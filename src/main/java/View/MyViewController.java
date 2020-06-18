@@ -1,15 +1,19 @@
 package View;
 
 import ViewModel.MyViewModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
 
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Observable;
@@ -27,6 +31,14 @@ public class MyViewController extends Controller implements IView, Initializable
     public Label lbl_player_row;
     @FXML
     public Label lbl_player_column;
+    @FXML
+    public Button ShowSolution;
+    @FXML
+    public Button HideSolution;
+    @FXML
+    public Button soundOn;
+    @FXML
+    public Button soundOff;
 
     StringProperty update_player_position_row = new SimpleStringProperty();
     StringProperty update_player_position_col = new SimpleStringProperty();
@@ -51,6 +63,12 @@ public class MyViewController extends Controller implements IView, Initializable
     public void initialize(URL location, ResourceBundle resources) {
         lbl_player_row.textProperty().bind(update_player_position_row);
         lbl_player_column.textProperty().bind(update_player_position_col);
+        viewModel.pauseMusic();
+        try{
+            viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobNice.mp3").toURI().toString())),200);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 
     //validation check for generate maze
@@ -68,59 +86,33 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
-        viewModel.addObserver(this);
+//        viewModel.addObserver(this);
         String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
             int rows = Integer.valueOf(strRows);
             int cols = Integer.valueOf(strCols);
             viewModel.generateMaze(rows, cols);
+            ShowSolution.setDisable(false);
         }
         else
-            showErrorAlert("Values inserted aren't valid! Please enter only numbers that are greater than 1 and smaller than 501 (:");
+            showErrorAlert("Values inserted aren't valid!" +
+                    "\nPlease enter only numbers between 2 to 500 (:");
     }
 
     public void solveMaze()
     {
-        //try to solve null maze
-        if (mazeDisplayer.getMaze()==null)
-            showErrorAlert("There is no maze to solve :(" +
-                    "\nPlease click on the new maze or load maze button first.");
-        else
-            viewModel.solve();
+        viewModel.solve();
+        HideSolution.setDisable(false);
+    }
+
+    public void hideSolution() {
+        mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
+        HideSolution.setDisable(true);
     }
 
     //move character
     public void keyPressed(KeyEvent keyEvent) {
-//        int player_row_position = mazeDisplayer.getRow_player();
-//        int player_col_position = mazeDisplayer.getCol_player();
-//        switch (keyEvent.getCode()){
-//            case UP:
-//                mazeDisplayer.set_player_position(player_row_position-1,player_col_position);
-//                set_update_player_position_row(player_row_position-1 + "");
-//                set_update_player_position_col(player_col_position + "");
-//                break;
-//            case DOWN:
-//                mazeDisplayer.set_player_position(player_row_position+1,player_col_position);
-//                set_update_player_position_row(player_row_position+1 + "");
-//                set_update_player_position_col(player_col_position + "");
-//                break;
-//            case RIGHT:
-//                mazeDisplayer.set_player_position(player_row_position,player_col_position+1);
-//                set_update_player_position_row(player_row_position +"");
-//                set_update_player_position_col(player_col_position+1 +"");
-//                break;
-//            case LEFT:
-//                mazeDisplayer.set_player_position(player_row_position,player_col_position-1);
-//                set_update_player_position_row(player_row_position +"");
-//                set_update_player_position_col(player_col_position-1 +"");
-//                break;
-//            default:
-//                mazeDisplayer.set_player_position(player_row_position,player_col_position);
-//                set_update_player_position_row(player_row_position +"");
-//                set_update_player_position_col(player_col_position +"");
-//
-//        }
         viewModel.moveCharacter(keyEvent);
         keyEvent.consume();
     }
@@ -137,17 +129,44 @@ public class MyViewController extends Controller implements IView, Initializable
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
+                set_update_player_position_row(viewModel.getCurrPosRow() + "");
+                set_update_player_position_col(viewModel.getCurrPosCol() + "");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame() == true)
+                {
                     showAlert("YOU WON!");
-                else
+                    viewModel.pauseMusic();
+                    try{
+                        viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobThemeSong.mp3").toURI().toString())),200);
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
                     mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
+                    set_update_player_position_row(viewModel.getCurrPosRow() + "");
+                    set_update_player_position_col(viewModel.getCurrPosCol() + "");
+                }
             }
-            //solve
             else if (arg == "solve") {
                 mazeDisplayer.drawSol(viewModel.getSolution());
             }
+            else if (arg == "save") {
+                showAlert("Your maze was successfully saved");
+            }
         }
+    }
+
+    public void soundOn() throws URISyntaxException {
+        viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobNice.mp3").toURI().toString())),200);
+        soundOn.setDisable(true);
+        soundOff.setDisable(false);
+    }
+
+    public void soundOff(){
+        viewModel.pauseMusic();
+        soundOn.setDisable(false);
+        soundOff.setDisable(true);
     }
 }

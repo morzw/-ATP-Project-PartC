@@ -6,6 +6,7 @@ import IO.MyDecompressorInputStream;
 import Server.Server;
 import Server.ServerStrategyGenerateMaze;
 import Server.ServerStrategySolveSearchProblem;
+import ViewModel.MyViewModel;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
 import algorithms.search.SearchableMaze;
@@ -31,26 +32,21 @@ public class MyModel extends Observable implements IModel {
     private boolean wonGame;
     private ArrayList<AState> mazeSolutionSteps;
     private ArrayList<int[]> sol;
-    //
-    private SearchableMaze sMaze;
+//    private SearchableMaze sMaze;
 
-    public int[][] getMazeArray() {
-        return mazeArray;
-    }
+    public int[][] getMazeArray() { return mazeArray; }
 
-    public int getGoalPosRow() {
-        return goalPosRow;
-    }
+    public int getGoalPosRow() { return goalPosRow; }
 
-    public int getGoalPosCol() {
-        return goalPosCol;
-    }
+    public int getGoalPosCol() { return goalPosCol; }
 
     public int getCurrPosRow() { return currPosRow; }
 
     public int getCurrPosCol() { return currPosCol; }
 
     public boolean isWonGame() { return wonGame; }
+
+    public ArrayList<int[]> getSol() { return sol; }
 
     //constructor
     private MyModel() {
@@ -68,19 +64,10 @@ public class MyModel extends Observable implements IModel {
         return myModel;
     }
 
-    public ArrayList<int[]> getSol() {
-        return sol;
-    }
-
     @Override
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
-        mazeArray = maze.getMaze();
-        currPosRow = maze.getStartPosition().getRowIndex();
-        currPosCol = maze.getStartPosition().getColumnIndex();
-        goalPosRow = maze.getGoalPosition().getRowIndex();
-        goalPosCol = maze.getGoalPosition().getColumnIndex();
-        wonGame = false;
+        initMaze(maze);
         setChanged();
         notifyObservers("generate");
     }
@@ -126,15 +113,13 @@ public class MyModel extends Observable implements IModel {
     }
 
     //from partB - change to public and add new jar
-    private int getRowState(AState state)
-    {
+    private int getRowState(AState state) {
         int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0,index));
+        int row = Integer.parseInt(state.getName().substring(0, index));
         return row;
     }
 
-    private int getColState(AState state)
-    {
+    private int getColState(AState state) {
         int index = state.getName().indexOf(",");
         int col = Integer.parseInt(state.getName().substring(index+1));
         return col;
@@ -147,6 +132,7 @@ public class MyModel extends Observable implements IModel {
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
+                    maze.setStartPosition(currPosRow, currPosCol);
                     toServer.writeObject(maze);
                     toServer.flush();
                     Solution mazeSolution = (Solution)fromServer.readObject();
@@ -163,16 +149,14 @@ public class MyModel extends Observable implements IModel {
 
     //need to add diagonal moves!!!
     @Override
-    public void updateCharacterLocation(int direction)
-    {
+    public void updateCharacterLocation(int direction) {
         /*
             direction = 1 -> Up
             direction = 2 -> Down
             direction = 3 -> Left
             direction = 4 -> Right
          */
-        switch(direction)
-        {
+        switch(direction) {
             case 1: //Up
                 if (isValidMove(currPosRow-1, currPosCol))
                     currPosRow--;
@@ -191,7 +175,7 @@ public class MyModel extends Observable implements IModel {
                     currPosCol++;
                 break;
         }
-        //check if won the game
+        //checks if won the game
         if (currPosRow == goalPosRow && currPosCol == goalPosCol)
             wonGame = true;
         //set & notify
@@ -216,6 +200,8 @@ public class MyModel extends Observable implements IModel {
             output.flush();
             output.close();
             file.close();
+            setChanged();
+            notifyObservers("save");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -228,12 +214,27 @@ public class MyModel extends Observable implements IModel {
             FileInputStream file = new FileInputStream(filePath);
             ObjectInputStream input = new ObjectInputStream(file);
             maze = (Maze)input.readObject();
+            initMaze(maze);
             file.close();
             setChanged();
             notifyObservers("load");
         } catch (IOException|ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    private void initMaze(Maze newMaze) {
+        mazeArray = maze.getMaze();
+        currPosRow = maze.getStartPosition().getRowIndex();
+        currPosCol = maze.getStartPosition().getColumnIndex();
+        goalPosRow = maze.getGoalPosition().getRowIndex();
+        goalPosCol = maze.getGoalPosition().getColumnIndex();
+        wonGame = false;
+    }
+
+    @Override
+    public void addObserver(MyViewModel viewModel) {
+        super.addObserver(viewModel);
     }
 
     @Override

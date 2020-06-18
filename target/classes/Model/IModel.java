@@ -1,5 +1,7 @@
 package Model;
 
+import ViewModel.MyViewModel;
+
 public interface IModel {
 
     void generateMaze(int row, int col);
@@ -8,4 +10,6 @@ public interface IModel {
     void stopServers();
     void saveMazeToFile(String filePath);
     void loadUserMaze (String filePath);
+    void addObserver(MyViewModel viewModel);
+
 }

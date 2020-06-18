@@ -3,6 +3,8 @@ package ViewModel;
 import Model.IModel;
 import Model.MyModel;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.util.ArrayList;
 import java.util.Observable;
@@ -18,28 +20,20 @@ public class MyViewModel extends Observable implements Observer {
     private int currPosRow;
     private int currPosCol;
     private boolean wonGame;
-
     private ArrayList<int[]> solution;
+    private MediaPlayer playMusic;
 
-    public ArrayList<int[]> getSolution() {
-        return solution;
-    }
+    public ArrayList<int[]> getSolution() { return solution; }
 
-    public int[][] getMazeArray() {
-        return mazeArray;
-    }
+    public int[][] getMazeArray() { return mazeArray; }
 
     public int getCurrPosRow() { return currPosRow; }
 
     public int getCurrPosCol() { return currPosCol; }
 
-    public int getGoalPosRow() {
-        return goalPosRow;
-    }
+    public int getGoalPosRow() { return goalPosRow; }
 
-    public int getGoalPosCol() {
-        return goalPosCol;
-    }
+    public int getGoalPosCol() { return goalPosCol; }
 
     public boolean isWonGame() { return wonGame; }
 
@@ -75,16 +69,12 @@ public class MyViewModel extends Observable implements Observer {
                 setChanged();
                 notifyObservers("move");
             }
-            //solve-instead of save the sol in viewModel and view
-            else if (arg == "solve")
-            {
+            else if (arg == "solve") {
                 solution = model.getSol();
                 setChanged();
                 notifyObservers("solve");
             }
-            else if (arg == "save")
-            {
-
+            else if (arg == "save") {
                 setChanged();
                 notifyObservers("save");
             }
@@ -109,10 +99,9 @@ public class MyViewModel extends Observable implements Observer {
     }
 
     //move character
-    public void moveCharacter(KeyEvent keyEvent)
-    {
+    public void moveCharacter(KeyEvent keyEvent) {
         int direction = -1;
-        switch (keyEvent.getCode()){
+        switch (keyEvent.getCode()) {
             case UP:
                 direction = 1;
                 break;
@@ -133,8 +122,21 @@ public class MyViewModel extends Observable implements Observer {
         model.solveMaze();
     }
 
-    public void exit()
-    {
+    public void exit() {
         model.stopServers();
+    }
+
+    //Play Music
+    public void playMusic(Media media, double vol) {
+        playMusic = new MediaPlayer(media);
+        playMusic.setVolume(vol);
+        playMusic.play();
+    }
+
+    //Stop Music
+    public void pauseMusic() {
+        if (playMusic != null){
+            playMusic.stop();
+        }
     }
 }

@@ -1,36 +1,29 @@
 package View;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Observable;
 
-public class AboutPageController {
+public class AboutPageController extends Controller {
+    @FXML
+    public Button algoButton;
+
     public void aboutAlgo() {
-        Stage algoStage = new Stage();
-        Parent root;
-        try {
-            root = FXMLLoader.load(getClass().getResource("AlgoPage.fxml"));
-            algoStage.setTitle("What happens behind the scenes...");
-            algoStage.setScene(new Scene(root, 800, 650));
-            algoStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene("AlgoPage.fxml",(Stage)algoButton.getScene().getWindow(),"What happens behind the scenes...");
     }
 
     public void aboutUs() {
-        Stage aboutStage = new Stage();
-        Parent root;
-        try {
-            root = FXMLLoader.load(getClass().getResource("AboutUsPage.fxml"));
-            aboutStage.setTitle("Don't Worry...");
-            aboutStage.setScene(new Scene(root, 800, 650));
-            aboutStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene("AboutUsPage.fxml",(Stage)algoButton.getScene().getWindow(),"About us");
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }

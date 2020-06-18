@@ -18,13 +18,8 @@ public class MazeDisplayer extends Canvas {
     private int col_player;
     private int row_goal;
     private int col_goal;
-
     private boolean isSolved;
     private ArrayList<int[]> solution;
-
-//    public void setSolved(boolean solved) {
-//        isSolved = solved;
-//    }
 
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
@@ -94,9 +89,9 @@ public class MazeDisplayer extends Canvas {
         this.maze = maze;
     }
 
-    public void drawMaze(int [][] maze)
-    {
+    public void drawMaze(int [][] maze) {
         this.maze = maze;
+        isSolved = false;
         draw();
     }
 
@@ -116,6 +111,7 @@ public class MazeDisplayer extends Canvas {
             graphicsContext.setStroke(Color.BLACK);
             graphicsContext.setLineWidth(2);
             graphicsContext.stroke();
+//            graphicsContext.setFill(Color.RED);
             double w, h;
             //Draw Maze
             Image wallImage = null;
@@ -141,6 +137,25 @@ public class MazeDisplayer extends Canvas {
                     }
                 }
             }
+            //Draw Sol
+            if (isSolved)
+            {
+                Image solImage = null;
+                try {
+                    solImage = new Image(new FileInputStream(getImageFileNameSol()));
+                } catch (FileNotFoundException e) {
+                    System.out.println("There is no file....");
+                }
+                double hSol,wSol;
+                for (int i=1; i<solution.size()-1; i++) {
+                    hSol = solution.get(i)[0] * cellHeight;
+                    wSol = solution.get(i)[1] * cellWidth;
+                    if (solImage == null)
+                        graphicsContext.fillRect(wSol, hSol, cellWidth, cellHeight);
+                    else
+                        graphicsContext.drawImage(solImage, wSol, hSol, cellWidth, cellHeight);
+                }
+            }
             //Player
             double h_player = getRow_player() * cellHeight;
             double w_player = getCol_player() * cellWidth;
@@ -161,25 +176,6 @@ public class MazeDisplayer extends Canvas {
                 System.out.println("There is no Image player....");
             }
             graphicsContext.drawImage(targetImage, w_target, h_target, cellWidth, cellHeight);
-            //Draw Sol
-            if (isSolved)
-            {
-                Image solImage = null;
-                try {
-                    solImage = new Image(new FileInputStream(getImageFileNameSol()));
-                } catch (FileNotFoundException e) {
-                    System.out.println("There is no file....");
-                }
-                double hSol,wSol;
-                for (int [] state: solution) {
-                    hSol = state[0] * cellHeight;
-                    wSol = state[1] * cellWidth;
-                    if (solImage == null)
-                        graphicsContext.fillRect(wSol, hSol, cellWidth, cellHeight);
-                    else
-                        graphicsContext.drawImage(solImage, wSol, hSol, cellWidth, cellHeight);
-                }
-            }
         }
     }
 
