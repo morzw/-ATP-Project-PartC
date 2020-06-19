@@ -155,13 +155,16 @@ public class MyModel extends Observable implements IModel {
             direction = 2 -> Down
             direction = 3 -> Left
             direction = 4 -> Right
+            direction = 5 -> Up Left
+            direction = 6 -> Up Right
+            direction = 7 -> Down Left
+            direction = 8 -> Down Right
          */
         switch(direction) {
             case 1: //Up
                 if (isValidMove(currPosRow-1, currPosCol))
                     currPosRow--;
                 break;
-
             case 2: //Down
                 if (isValidMove(currPosRow+1, currPosCol))
                     currPosRow++;
@@ -174,6 +177,34 @@ public class MyModel extends Observable implements IModel {
                 if (isValidMove(currPosRow, currPosCol+1))
                     currPosCol++;
                 break;
+            case 5: //Up Left
+                if (isValidMove(currPosRow-1, currPosCol-1))
+                {
+                    currPosRow--;
+                    currPosCol--;
+                }
+                break;
+            case 6: //Up Right
+                if (isValidMove(currPosRow-1, currPosCol+1))
+                {
+                    currPosRow--;
+                    currPosCol++;
+                }
+                break;
+            case 7: //Down Left
+                if (isValidMove(currPosRow+1, currPosCol-1))
+                {
+                    currPosRow++;
+                    currPosCol--;
+                }
+                break;
+            case 8: //Down Right
+                if (isValidMove(currPosRow+1, currPosCol+1))
+                {
+                    currPosRow++;
+                    currPosCol++;
+                }
+                break;
         }
         //checks if won the game
         if (currPosRow == goalPosRow && currPosCol == goalPosCol)
@@ -184,7 +215,7 @@ public class MyModel extends Observable implements IModel {
     }
 
     //checks if the player's move is valid
-    public boolean isValidMove(int wantedRow, int wantedCol) {
+    private boolean isValidMove(int wantedRow, int wantedCol) {
         if (wantedRow < 0 || wantedRow >= mazeArray.length ||
                 wantedCol < 0 || wantedCol >= mazeArray[0].length || mazeArray[wantedRow][wantedCol] == 1)
             return false;
@@ -215,11 +246,13 @@ public class MyModel extends Observable implements IModel {
             ObjectInputStream input = new ObjectInputStream(file);
             maze = (Maze)input.readObject();
             initMaze(maze);
-            file.close();
             setChanged();
             notifyObservers("load");
+            file.close();
         } catch (IOException|ClassNotFoundException e) {
-            e.printStackTrace();
+            setChanged();
+            notifyObservers("load incorrect file type");
+            //e.printStackTrace();
         }
     }
 

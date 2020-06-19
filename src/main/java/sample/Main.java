@@ -18,8 +18,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/WelcomePage.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
-        //primaryStage.setScene(new Scene(root, 768, 614));
-        primaryStage.setScene(new Scene(root, 700, 500));
+        primaryStage.setScene(new Scene(root,900,650));
         primaryStage.show();
 
         IModel model = MyModel.getInstance();

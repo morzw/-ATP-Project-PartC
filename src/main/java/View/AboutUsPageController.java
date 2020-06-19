@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import java.util.Observable;
 
 public class AboutUsPageController extends Controller {
+
     @FXML
     public Button backToAbout;
 
@@ -15,7 +16,5 @@ public class AboutUsPageController extends Controller {
     }
 
     @Override
-    public void update(Observable o, Object arg) {
-
-    }
+    public void update(Observable o, Object arg) {}
 }

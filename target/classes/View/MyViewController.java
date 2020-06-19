@@ -1,7 +1,6 @@
 package View;
 
 import ViewModel.MyViewModel;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -15,7 +14,6 @@ import javafx.scene.media.Media;
 
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
@@ -86,7 +84,6 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
-//        viewModel.addObserver(this);
         String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
@@ -124,13 +121,19 @@ public class MyViewController extends Controller implements IView, Initializable
     @Override
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
-            if (arg == "update") {
+            if (arg == "update") { //generate & load
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
+                //added
+                ShowSolution.setDisable(false);
+            }
+            else if (arg == "load incorrect file type")
+            {
+                showErrorAlert("You tried to upload an unsuitable file type. Please reload a file with .maze extension only.");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame() == true)
@@ -153,8 +156,12 @@ public class MyViewController extends Controller implements IView, Initializable
                 mazeDisplayer.drawSol(viewModel.getSolution());
             }
             else if (arg == "save") {
-                showAlert("Your maze was successfully saved");
+                showAlert("Your maze was successfully saved.");
             }
+//            else if (arg == "no path selected")
+//            {
+//
+//            }
         }
     }
 

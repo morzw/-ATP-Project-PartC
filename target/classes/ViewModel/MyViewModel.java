@@ -62,6 +62,11 @@ public class MyViewModel extends Observable implements Observer {
                 setChanged();
                 notifyObservers("update");
             }
+            else if (arg == "load incorrect file type")
+            {
+                setChanged();
+                notifyObservers("load incorrect file type");
+            }
             else if (arg == "move") {
                 currPosRow = model.getCurrPosRow();
                 currPosCol = model.getCurrPosCol();
@@ -90,12 +95,22 @@ public class MyViewModel extends Observable implements Observer {
     public void saveMaze(String path) {
         if (path != null)
             model.saveMazeToFile(path);
+        else
+        {
+            setChanged();
+            notifyObservers("no path selected");
+        }
     }
 
     //load maze
     public void loadMaze(String path) {
         if (path != null)
             model.loadUserMaze(path);
+        else
+        {
+            setChanged();
+            notifyObservers("no path selected");
+        }
     }
 
     //move character
@@ -105,14 +120,39 @@ public class MyViewModel extends Observable implements Observer {
             case UP:
                 direction = 1;
                 break;
+            case DIGIT8:
+                direction = 1;
+                break;
             case DOWN:
+                direction = 2;
+                break;
+            case DIGIT2:
                 direction = 2;
                 break;
             case LEFT:
                 direction = 3;
                 break;
+            case DIGIT4:
+                direction = 3;
+                break;
             case RIGHT:
                 direction = 4;
+                break;
+            case DIGIT6:
+                direction = 4;
+                break;
+            //Diagonal steps
+            case DIGIT7:
+                direction = 5;
+                break;
+            case DIGIT9:
+                direction = 6;
+                break;
+            case DIGIT1:
+                direction = 7;
+                break;
+            case DIGIT3:
+                direction = 8;
                 break;
         }
         model.updateCharacterLocation(direction);

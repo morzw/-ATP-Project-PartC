@@ -5,15 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.Pane;
-import javafx.scene.media.Media;
+
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.Observer;
 
-public abstract class Controller implements Observer {
+public abstract class Controller implements Observer, IView {
 
     protected MyViewModel viewModel = MyViewModel.getInstance();
 
@@ -22,17 +22,61 @@ public abstract class Controller implements Observer {
     {
         Parent root;
         try {
-//            root = FXMLLoader.load(getClass().getResource(fxmlPath));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
             root = fxmlLoader.load();
             viewModel.addObserver(fxmlLoader.getController());
-
             stage.setTitle(title);
-            stage.setScene(new Scene(root, 700, 500));
+            stage.setScene(new Scene(root,900,660));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    //Saves and loads user's maze
+    public void handleLoadAdSave(String loadOrSave, Stage stage, boolean changeScene)
+    {
+        FileChooser fc = new FileChooser();
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("maze files","*.maze");
+        fc.getExtensionFilters().add(filter);
+        if (loadOrSave == "load")
+        {
+            fc.setTitle("Load Maze");
+            File file = fc.showOpenDialog(stage);
+            if (changeScene)
+                changeScene("../View/MyView.fxml",stage,"Load Maze");
+            viewModel.loadMaze(file.getPath());
+        }
+        else //save
+        {
+            if (viewModel.getMazeArray() != null)
+            {
+                fc.setTitle("Save Maze");
+                File file = fc.showSaveDialog(stage);
+                if (file == null)
+                {
+
+                }
+                viewModel.saveMaze(file.getPath());
+            }
+            else
+                showErrorAlert("There is no maze to save. Please generate an new maze first.");
+        }
+    }
+
+    public void handleAboutButton() {
+        Stage aboutStage = new Stage();
+        changeScene("../View/AboutPage.fxml",aboutStage,"About");
+    }
+
+    public void handleHelpButton()
+    {
+        showAlert("Please help SpongeBob come back to his home... \n" +
+                "In order to do so, you will have to solve a maze!\n\n" +
+                "If you want to move RIGHT - press 6, If you want to move LEFT - press 4, for UP - press 8, and for DOWN - press 2.\n" +
+                "You can also move diagonally: for UP RIGHT - press 9, for UP LEFT - press 7, for DOWN RIGHT - press 3 and for DOWN LEFT - press 1.\n\n"+
+                "DON'T WORRY!!! we'll be with you all the way home. If you need help, just click on the Show Solution button."
+        );
     }
 
     //Alert for Information
