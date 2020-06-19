@@ -215,7 +215,7 @@ public class MyModel extends Observable implements IModel {
     }
 
     //checks if the player's move is valid
-    public boolean isValidMove(int wantedRow, int wantedCol) {
+    private boolean isValidMove(int wantedRow, int wantedCol) {
         if (wantedRow < 0 || wantedRow >= mazeArray.length ||
                 wantedCol < 0 || wantedCol >= mazeArray[0].length || mazeArray[wantedRow][wantedCol] == 1)
             return false;

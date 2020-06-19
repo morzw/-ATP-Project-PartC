@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import java.util.Observable;
+import java.util.Optional;
 
 public class MenuBarController extends Controller {
 
@@ -36,9 +37,13 @@ public class MenuBarController extends Controller {
     }
 
     public void handleExit() {
-        viewModel.exit();
-        Window welcome = exitLable.getScene().getWindow();
-        ((Stage)welcome).close();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to exit?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) { //want to exit the game
+            viewModel.exit();
+            Window welcome = exitLable.getScene().getWindow();
+            ((Stage)welcome).close();
+        }
     }
 
     public void handleProperties() {

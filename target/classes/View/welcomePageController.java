@@ -27,7 +27,7 @@ public class WelcomePageController extends Controller {
     public void help() {
         handleHelpButton();
     }
-    
+
     @Override
     public void update(Observable o, Object arg) {}
 
