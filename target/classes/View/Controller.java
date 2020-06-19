@@ -43,9 +43,14 @@ public abstract class Controller implements Observer, IView {
         {
             fc.setTitle("Load Maze");
             File file = fc.showOpenDialog(stage);
-            if (changeScene)
-                changeScene("../View/MyView.fxml",stage,"Load Maze");
-            viewModel.loadMaze(file.getPath());
+            if (file != null)
+            {
+                if (changeScene)
+                    changeScene("../View/MyView.fxml",stage,"Load Maze");
+                viewModel.loadMaze(file.getPath());
+            }
+            else
+                showAlert("No path selected, Please try again.");
         }
         else //save
         {
@@ -53,11 +58,10 @@ public abstract class Controller implements Observer, IView {
             {
                 fc.setTitle("Save Maze");
                 File file = fc.showSaveDialog(stage);
-                if (file == null)
-                {
-
-                }
-                viewModel.saveMaze(file.getPath());
+                if (file != null)
+                    viewModel.saveMaze(file.getPath());
+                else
+                    showAlert("No path selected, Please try again.");
             }
             else
                 showErrorAlert("There is no maze to save. Please generate an new maze first.");

@@ -95,22 +95,12 @@ public class MyViewModel extends Observable implements Observer {
     public void saveMaze(String path) {
         if (path != null)
             model.saveMazeToFile(path);
-        else
-        {
-            setChanged();
-            notifyObservers("no path selected");
-        }
     }
 
     //load maze
     public void loadMaze(String path) {
         if (path != null)
             model.loadUserMaze(path);
-        else
-        {
-            setChanged();
-            notifyObservers("no path selected");
-        }
     }
 
     //move character

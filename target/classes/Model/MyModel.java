@@ -234,7 +234,7 @@ public class MyModel extends Observable implements IModel {
             setChanged();
             notifyObservers("save");
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 

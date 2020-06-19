@@ -15,7 +15,7 @@ import java.util.Observer;
 
 public abstract class Controller implements Observer, IView {
 
-    protected MyViewModel viewModel = MyViewModel.getInstance();
+    MyViewModel viewModel = MyViewModel.getInstance();
 
     //changes the scene
     public void changeScene(String fxmlPath, Stage stage, String title)
@@ -39,13 +39,18 @@ public abstract class Controller implements Observer, IView {
         FileChooser fc = new FileChooser();
         FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("maze files","*.maze");
         fc.getExtensionFilters().add(filter);
-        if (loadOrSave == "load")
+        if (loadOrSave.equals("load"))
         {
             fc.setTitle("Load Maze");
             File file = fc.showOpenDialog(stage);
-            if (changeScene)
-                changeScene("../View/MyView.fxml",stage,"Load Maze");
-            viewModel.loadMaze(file.getPath());
+            if (file != null)
+            {
+                if (changeScene)
+                    changeScene("../View/MyView.fxml",stage,"Load Maze");
+                viewModel.loadMaze(file.getPath());
+            }
+            else
+                showAlert("No path selected, Please try again.");
         }
         else //save
         {
@@ -53,11 +58,10 @@ public abstract class Controller implements Observer, IView {
             {
                 fc.setTitle("Save Maze");
                 File file = fc.showSaveDialog(stage);
-                if (file == null)
-                {
-
-                }
-                viewModel.saveMaze(file.getPath());
+                if (file != null)
+                    viewModel.saveMaze(file.getPath());
+                else
+                    showAlert("No path selected, Please try again.");
             }
             else
                 showErrorAlert("There is no maze to save. Please generate an new maze first.");
