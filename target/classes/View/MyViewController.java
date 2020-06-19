@@ -1,16 +1,26 @@
 package View;
 
 import ViewModel.MyViewModel;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import static javafx.geometry.Pos.CENTER;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -84,6 +94,7 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
+//        viewModel.addObserver(this);
         String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
@@ -121,27 +132,46 @@ public class MyViewController extends Controller implements IView, Initializable
     @Override
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
-            if (arg == "update") { //generate & load
+            if (arg == "update") {
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
-                //added
-                ShowSolution.setDisable(false);
-            }
-            else if (arg == "load incorrect file type")
-            {
-                showErrorAlert("You tried to upload an unsuitable file type. Please reload a file with .maze extension only.");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame() == true)
                 {
-                    showAlert("YOU WON!");
                     viewModel.pauseMusic();
+                    Stage stage = new Stage();
+                    stage.setTitle("C O N G R A T U L A T I O N S ! ! !");
+                    VBox layout = new VBox();
+                    HBox H = new HBox(5);
+                    H.setAlignment(CENTER);
+                    layout.setAlignment(CENTER);
+                    Button close = new Button();
+                    close.setText("Resume to Game");
+                    H.getChildren().add(close);
+                    layout.spacingProperty().setValue(10);
+                    Image im = new Image("/Images/giphy.gif");
+                    ImageView image = new ImageView(im);
+                    layout.getChildren().add(image);
+                    layout.getChildren().add(H);
+                    Scene scene = new Scene(layout, 494, 365);
+                    scene.getStylesheets().add(getClass().getResource("/View/MainStyle.css").toExternalForm());
+                    stage.setScene(scene);
+                    stage.initModality(Modality.APPLICATION_MODAL); //Lock the window until it closes
+                    stage.show();
+                    //close button
+                    close.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            stage.close();
+                        }
+                    });
                     try{
-                        viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobThemeSong.mp3").toURI().toString())),200);
+                        viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobFlute.mp3").toURI().toString())),200);
                     } catch (URISyntaxException e) {
                         e.printStackTrace();
                     }
@@ -156,12 +186,8 @@ public class MyViewController extends Controller implements IView, Initializable
                 mazeDisplayer.drawSol(viewModel.getSolution());
             }
             else if (arg == "save") {
-                showAlert("Your maze was successfully saved.");
+                showAlert("Your maze was successfully saved");
             }
-//            else if (arg == "no path selected")
-//            {
-//
-//            }
         }
     }
 
