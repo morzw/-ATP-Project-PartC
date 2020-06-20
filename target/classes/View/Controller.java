@@ -15,7 +15,7 @@ import java.util.Observer;
 
 public abstract class Controller implements Observer, IView {
 
-    protected MyViewModel viewModel = MyViewModel.getInstance();
+    MyViewModel viewModel = MyViewModel.getInstance();
 
     //changes the scene
     public void changeScene(String fxmlPath, Stage stage, String title)
@@ -39,7 +39,7 @@ public abstract class Controller implements Observer, IView {
         FileChooser fc = new FileChooser();
         FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("maze files","*.maze");
         fc.getExtensionFilters().add(filter);
-        if (loadOrSave == "load")
+        if (loadOrSave.equals("load"))
         {
             fc.setTitle("Load Maze");
             File file = fc.showOpenDialog(stage);

@@ -15,7 +15,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.stage.Modality;
@@ -34,6 +36,10 @@ public class MyViewController extends Controller implements IView, Initializable
     @FXML
     public TextField textField_mazeColumns;
     @FXML
+    public BorderPane borderPane;
+    @FXML
+    public Pane pane;
+    @FXML
     public MazeDisplayer mazeDisplayer;
     @FXML
     public Label lbl_player_row;
@@ -48,14 +54,14 @@ public class MyViewController extends Controller implements IView, Initializable
     @FXML
     public Button soundOff;
 
-    StringProperty update_player_position_row = new SimpleStringProperty();
-    StringProperty update_player_position_col = new SimpleStringProperty();
+    private StringProperty update_player_position_row = new SimpleStringProperty();
+    private StringProperty update_player_position_col = new SimpleStringProperty();
 
     public String get_update_player_position_row() {
         return update_player_position_row.get();
     }
 
-    public void set_update_player_position_row(String update_player_position_row) {
+    private void set_update_player_position_row(String update_player_position_row) {
         this.update_player_position_row.set(update_player_position_row);
     }
 
@@ -63,7 +69,7 @@ public class MyViewController extends Controller implements IView, Initializable
         return update_player_position_col.get();
     }
 
-    public void set_update_player_position_col(String update_player_position_col) {
+    private void set_update_player_position_col(String update_player_position_col) {
         this.update_player_position_col.set(update_player_position_col);
     }
 
@@ -71,12 +77,40 @@ public class MyViewController extends Controller implements IView, Initializable
     public void initialize(URL location, ResourceBundle resources) {
         lbl_player_row.textProperty().bind(update_player_position_row);
         lbl_player_column.textProperty().bind(update_player_position_col);
+
+        adjustDisplaySize();
+
         viewModel.pauseMusic();
         try{
             viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobNice.mp3").toURI().toString())),200);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    private void adjustDisplaySize() {
+        //adjusts the size of the pane to borderPane
+        borderPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            pane.setMinHeight(borderPane.getWidth());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        borderPane.heightProperty().addListener((obs, oldVal, newVal) -> {
+            pane.setMinHeight(borderPane.getHeight());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        //adjusts the size of the maze displayer to pane
+        pane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            mazeDisplayer.setWidth(pane.getWidth());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        pane.heightProperty().addListener((obs, oldVal, newVal) -> {
+            mazeDisplayer.setHeight(pane.getHeight());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
     }
 
     //validation check for generate maze
@@ -141,7 +175,7 @@ public class MyViewController extends Controller implements IView, Initializable
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
             }
             else if (arg == "move") {
-                if (viewModel.isWonGame() == true)
+                if (viewModel.isWonGame())
                 {
                     viewModel.pauseMusic();
                     Stage stage = new Stage();

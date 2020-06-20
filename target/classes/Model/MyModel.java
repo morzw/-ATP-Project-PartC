@@ -99,7 +99,7 @@ public class MyModel extends Observable implements IModel {
 
     @Override
     public void solveMaze() {
-        sol = new ArrayList<int[]>();
+        sol = new ArrayList<>();
         CommunicateWithServer_SolveSearchProblem();
         //updates sol
         for (AState state:mazeSolutionSteps) {
