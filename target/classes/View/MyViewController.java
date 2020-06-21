@@ -1,6 +1,8 @@
 package View;
 
 import ViewModel.MyViewModel;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
@@ -15,7 +17,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ScrollEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.stage.Modality;
@@ -34,6 +39,10 @@ public class MyViewController extends Controller implements IView, Initializable
     @FXML
     public TextField textField_mazeColumns;
     @FXML
+    public BorderPane borderPane;
+    @FXML
+    public Pane pane;
+    @FXML
     public MazeDisplayer mazeDisplayer;
     @FXML
     public Label lbl_player_row;
@@ -48,14 +57,14 @@ public class MyViewController extends Controller implements IView, Initializable
     @FXML
     public Button soundOff;
 
-    StringProperty update_player_position_row = new SimpleStringProperty();
-    StringProperty update_player_position_col = new SimpleStringProperty();
+    private StringProperty update_player_position_row = new SimpleStringProperty();
+    private StringProperty update_player_position_col = new SimpleStringProperty();
 
     public String get_update_player_position_row() {
         return update_player_position_row.get();
     }
 
-    public void set_update_player_position_row(String update_player_position_row) {
+    private void set_update_player_position_row(String update_player_position_row) {
         this.update_player_position_row.set(update_player_position_row);
     }
 
@@ -63,7 +72,7 @@ public class MyViewController extends Controller implements IView, Initializable
         return update_player_position_col.get();
     }
 
-    public void set_update_player_position_col(String update_player_position_col) {
+    private void set_update_player_position_col(String update_player_position_col) {
         this.update_player_position_col.set(update_player_position_col);
     }
 
@@ -71,12 +80,38 @@ public class MyViewController extends Controller implements IView, Initializable
     public void initialize(URL location, ResourceBundle resources) {
         lbl_player_row.textProperty().bind(update_player_position_row);
         lbl_player_column.textProperty().bind(update_player_position_col);
+        adjustDisplaySize();
         viewModel.pauseMusic();
         try{
             viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobNice.mp3").toURI().toString())),200);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    private void adjustDisplaySize() {
+        //adjusts the size of the pane to borderPane
+        borderPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            pane.setMinHeight(borderPane.getWidth());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        borderPane.heightProperty().addListener((obs, oldVal, newVal) -> {
+            pane.setMinHeight(borderPane.getHeight());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        //adjusts the size of the maze displayer to pane
+        pane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            mazeDisplayer.setWidth(pane.getWidth());
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
+        pane.heightProperty().addListener((obs, oldVal, newVal) -> {
+            mazeDisplayer.setHeight(pane.getHeight()-40);
+            if (viewModel.getMazeArray() != null)
+                mazeDisplayer.draw();
+        });
     }
 
     //validation check for generate maze
@@ -94,7 +129,6 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
-//        viewModel.addObserver(this);
         String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
@@ -139,9 +173,10 @@ public class MyViewController extends Controller implements IView, Initializable
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
+                this.zoom(mazeDisplayer);
             }
             else if (arg == "move") {
-                if (viewModel.isWonGame() == true)
+                if (viewModel.isWonGame())
                 {
                     viewModel.pauseMusic();
                     Stage stage = new Stage();
@@ -151,7 +186,7 @@ public class MyViewController extends Controller implements IView, Initializable
                     H.setAlignment(CENTER);
                     layout.setAlignment(CENTER);
                     Button close = new Button();
-                    close.setText("Resume to Game");
+                    close.setText("CLOSE");
                     H.getChildren().add(close);
                     layout.spacingProperty().setValue(10);
                     Image im = new Image("/Images/giphy.gif");
@@ -186,7 +221,7 @@ public class MyViewController extends Controller implements IView, Initializable
                 mazeDisplayer.drawSol(viewModel.getSolution());
             }
             else if (arg == "save") {
-                showAlert("Your maze was successfully saved");
+                showAlert("Save Maze", "Your maze was successfully saved");
             }
         }
     }
@@ -201,5 +236,24 @@ public class MyViewController extends Controller implements IView, Initializable
         viewModel.pauseMusic();
         soundOn.setDisable(false);
         soundOff.setDisable(true);
+    }
+
+    //zoom in/out
+    public void zoom(MazeDisplayer pane) {
+        pane.setOnScroll(
+            new EventHandler<ScrollEvent>() {
+                @Override
+                public void handle(ScrollEvent event) {
+                    double zoomFactor = 1.05;
+                    double deltaY = event.getDeltaY();
+
+                    if (deltaY < 0) {
+                        zoomFactor = 0.95;
+                    }
+                    pane.setScaleX(pane.getScaleX() * zoomFactor);
+                    pane.setScaleY(pane.getScaleY() * zoomFactor);
+                    event.consume();
+                }
+            });
     }
 }

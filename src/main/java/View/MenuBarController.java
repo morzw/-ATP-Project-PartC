@@ -36,6 +36,10 @@ public class MenuBarController extends Controller {
         handleHelpButton();
     }
 
+    public void handleProperties() {
+        handlePropertiesButton();
+    }
+
     public void handleExit() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to exit?");
         Optional<ButtonType> result = alert.showAndWait();
@@ -46,10 +50,7 @@ public class MenuBarController extends Controller {
         }
     }
 
-    public void handleProperties() {
-        changeScene("../View/Properties.fxml",(Stage)menuBar.getScene().getWindow(),"Properties");
-    }
-
     @Override
     public void update(Observable o, Object arg) {}
+
 }

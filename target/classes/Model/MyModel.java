@@ -11,6 +11,8 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
 import algorithms.search.SearchableMaze;
 import algorithms.search.Solution;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -32,7 +34,7 @@ public class MyModel extends Observable implements IModel {
     private boolean wonGame;
     private ArrayList<AState> mazeSolutionSteps;
     private ArrayList<int[]> sol;
-//    private SearchableMaze sMaze;
+    private static final Logger LOG = LogManager.getLogger(); //Log4j2
 
     public int[][] getMazeArray() { return mazeArray; }
 
@@ -53,7 +55,9 @@ public class MyModel extends Observable implements IModel {
         mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         mazeGeneratingServer.start();
+        LOG.info("Generate maze server started");
         solveSearchProblemServer.start();
+        LOG.info("Solve maze server started");
     }
 
     //get instance
@@ -68,6 +72,7 @@ public class MyModel extends Observable implements IModel {
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
         initMaze(maze);
+        LOG.info("A new maze has been created. Maze dimensions - "+row+ " X " +col);
         setChanged();
         notifyObservers("generate");
     }
@@ -88,11 +93,13 @@ public class MyModel extends Observable implements IModel {
                     is.read(decompressedMaze);
                     maze = new Maze(decompressedMaze);
                 } catch (Exception e) {
+                    LOG.error("Exception: ", e);
                     e.printStackTrace();
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
+            LOG.error("Unknown Host Exception: ", e);
             e.printStackTrace();
         }
     }
@@ -108,6 +115,7 @@ public class MyModel extends Observable implements IModel {
             currPosState[1] = getColState(state);
             sol.add(currPosState);
         }
+        LOG.info("Solution for a maze was created");
         setChanged();
         notifyObservers("solve");
     }
@@ -138,11 +146,13 @@ public class MyModel extends Observable implements IModel {
                     Solution mazeSolution = (Solution)fromServer.readObject();
                     mazeSolutionSteps = mazeSolution.getSolutionPath();
                 } catch (Exception e) {
+                    LOG.error("Exception: ", e);
                     e.printStackTrace();
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
+            LOG.error("Unknown Host Exception: ", e);
             e.printStackTrace();
         }
     }
@@ -208,7 +218,10 @@ public class MyModel extends Observable implements IModel {
         }
         //checks if won the game
         if (currPosRow == goalPosRow && currPosCol == goalPosCol)
+        {
             wonGame = true;
+            LOG.info("The user won the game");
+        }
         //set & notify
         setChanged();
         notifyObservers("move");
@@ -231,9 +244,11 @@ public class MyModel extends Observable implements IModel {
             output.flush();
             output.close();
             file.close();
+            LOG.info("The maze has been successfully saved to the disk");
             setChanged();
             notifyObservers("save");
         } catch (IOException e) {
+            LOG.error("IO Exception: ", e);
             //e.printStackTrace();
         }
     }
@@ -246,10 +261,12 @@ public class MyModel extends Observable implements IModel {
             ObjectInputStream input = new ObjectInputStream(file);
             maze = (Maze)input.readObject();
             initMaze(maze);
+            LOG.info("A maze has been successfully uploaded from the disk");
             setChanged();
             notifyObservers("load");
             file.close();
         } catch (IOException|ClassNotFoundException e) {
+            LOG.error("IO/Class Not Found Exception : ", e);
             setChanged();
             notifyObservers("load incorrect file type");
             //e.printStackTrace();
@@ -273,6 +290,8 @@ public class MyModel extends Observable implements IModel {
     @Override
     public void stopServers() {
         mazeGeneratingServer.stop();
+        LOG.info("Generate maze server stopped");
         solveSearchProblemServer.stop();
+        LOG.info("Solve maze server stopped");
     }
 }

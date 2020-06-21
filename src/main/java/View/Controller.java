@@ -26,7 +26,8 @@ public abstract class Controller implements Observer, IView {
             root = fxmlLoader.load();
             viewModel.addObserver(fxmlLoader.getController());
             stage.setTitle(title);
-            stage.setScene(new Scene(root,900,660));
+//            stage.setScene(new Scene(root,900,660));
+            stage.setScene(new Scene(root,900,614));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -50,7 +51,7 @@ public abstract class Controller implements Observer, IView {
                 viewModel.loadMaze(file.getPath());
             }
             else
-                showAlert("No path selected, Please try again.");
+                showAlert("Load Maze","No path selected, Please try again.");
         }
         else //save
         {
@@ -61,7 +62,7 @@ public abstract class Controller implements Observer, IView {
                 if (file != null)
                     viewModel.saveMaze(file.getPath());
                 else
-                    showAlert("No path selected, Please try again.");
+                    showAlert("Save Maze","No path selected, Please try again.");
             }
             else
                 showErrorAlert("There is no maze to save. Please generate an new maze first.");
@@ -73,9 +74,8 @@ public abstract class Controller implements Observer, IView {
         changeScene("../View/AboutPage.fxml",aboutStage,"About");
     }
 
-    public void handleHelpButton()
-    {
-        showAlert("Please help SpongeBob come back to his home... \n" +
+    public void handleHelpButton() {
+        showAlert("Help!", "Please help SpongeBob come back to his home... \n" +
                 "In order to do so, you will have to solve a maze!\n\n" +
                 "If you want to move RIGHT - press 6, If you want to move LEFT - press 4, for UP - press 8, and for DOWN - press 2.\n" +
                 "You can also move diagonally: for UP RIGHT - press 9, for UP LEFT - press 7, for DOWN RIGHT - press 3 and for DOWN LEFT - press 1.\n\n"+
@@ -83,17 +83,21 @@ public abstract class Controller implements Observer, IView {
         );
     }
 
+    public void handlePropertiesButton() {
+        showAlert("Configuration Properties",
+                "Game Properties:\n\n\tMaze Generator Type - My Maze Generator\n\n\tSolving Algorithm - Breadth First Search\n\n\tThread Pool Size - 3");
+    }
+
     //Alert for Information
-    public void showAlert(String message)
-    {
+    public void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
         alert.setContentText(message);
         alert.show();
     }
 
     //Alert for Error
-    public void showErrorAlert(String message)
-    {
+    public void showErrorAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText(message);
         alert.show();

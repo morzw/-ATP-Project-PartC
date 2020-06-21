@@ -184,4 +184,5 @@ public class MazeDisplayer extends Canvas {
         solution = sol;
         draw();
     }
+
 }

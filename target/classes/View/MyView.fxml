@@ -5,7 +5,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane onMouseClicked="#mouseClicked" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="borderPane" onMouseClicked="#mouseClicked" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
     <fx:include source="MenuBar.fxml" />
     <left>
         <VBox prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
@@ -46,22 +48,42 @@
                   </GridPane.margin></Label>
                     <Label fx:id="lbl_player_row" GridPane.columnIndex="1" GridPane.rowIndex="4">
                   <GridPane.margin>
-                     <Insets top="135.0" />
-                  </GridPane.margin></Label>
+                     <Insets left="15.0" top="135.0" />
+                  </GridPane.margin>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets></Label>
                     <Label fx:id="lbl_player_column" GridPane.columnIndex="1" GridPane.rowIndex="5">
                   <GridPane.margin>
-                     <Insets top="135.0" />
-                  </GridPane.margin></Label>
+                     <Insets left="15.0" top="135.0" />
+                  </GridPane.margin>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets></Label>
                <Button fx:id="HideSolution" cancelButton="true" disable="true" layoutX="10.0" layoutY="123.0" onAction="#hideSolution" prefHeight="25.0" prefWidth="167.0" text="Hide Solution" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-               <Button fx:id="soundOn" cancelButton="true" disable="true" layoutX="10.0" layoutY="146.0" onAction="#soundOn" prefHeight="25.0" prefWidth="167.0" text="Sound On" GridPane.rowIndex="6">
+               <Button fx:id="soundOn" cancelButton="true" disable="true" layoutX="10.0" layoutY="146.0" onAction="#soundOn" prefHeight="40.0" prefWidth="40.0" text="" GridPane.rowIndex="6">
                   <GridPane.margin>
                      <Insets top="160.0" />
                   </GridPane.margin>
+                   <graphic>
+                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="/Images/SoundOn.png" />
+                           </image>
+                       </ImageView>
+                   </graphic>
                </Button>
-               <Button fx:id="soundOff" cancelButton="true" layoutX="10.0" layoutY="255.0" onAction="#soundOff" prefHeight="25.0" prefWidth="167.0" text="Sound Off" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <Button fx:id="soundOff" cancelButton="true" layoutX="10.0" layoutY="255.0" onAction="#soundOff" prefHeight="40.0" prefWidth="40.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="6">
                   <GridPane.margin>
                      <Insets top="160.0" />
                   </GridPane.margin>
+                   <graphic>
+                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="/Images/SoundOff.png" />
+                           </image>
+                       </ImageView>
+                   </graphic>
                </Button>
                 </GridPane>
             </children>
@@ -84,7 +106,7 @@
         </VBox>
     </top>
     <center>
-        <Pane BorderPane.alignment="CENTER">
+        <Pane fx:id="pane" BorderPane.alignment="CENTER">
             <children>
                 <MazeDisplayer fx:id="mazeDisplayer" height="589.0" imageFileNamePlayer="./resources/Images/spongebob.png" imageFileNameSol="./resources/Images/seashell.png" imageFileNameTarget="./resources/Images/house.png" imageFileNameWall="./resources/Images/jellyfish.png" onKeyPressed="#keyPressed" width="590.0" />
             </children>

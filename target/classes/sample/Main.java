@@ -7,10 +7,12 @@ import View.MenuBarController;
 import ViewModel.MyViewModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javax.swing.text.View;
@@ -23,15 +25,19 @@ public class Main extends Application {
         //View/MyView.fxml
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/WelcomePage.fxml"));
         Parent root = fxmlLoader.load();
-        primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
-        primaryStage.setScene(new Scene(root,900,650));
-        primaryStage.show();
 
         IModel model = MyModel.getInstance();
         MyViewModel viewModel = MyViewModel.getInstance();
         model.addObserver(viewModel);
         Controller welcomeController = fxmlLoader.getController();
         viewModel.addObserver(welcomeController);
+
+        Rectangle2D openingScene = Screen.getPrimary().getBounds();
+        primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
+//        primaryStage.setScene(new Scene(root,openingScene.getWidth()-500,openingScene.getHeight()-100));
+        primaryStage.setScene(new Scene(root,768,614)); //check
+        primaryStage.setResizable(true);
+        primaryStage.show();
 
         setStageCloseEvent(primaryStage, (MyModel) model);
     }

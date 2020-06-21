@@ -39,8 +39,6 @@ public class Main extends Application {
         primaryStage.setResizable(true);
         primaryStage.show();
 
-
-
         setStageCloseEvent(primaryStage, (MyModel) model);
     }
 
