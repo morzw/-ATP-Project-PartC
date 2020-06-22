@@ -27,7 +27,7 @@ public abstract class Controller implements Observer, IView {
             viewModel.addObserver(fxmlLoader.getController());
             stage.setTitle(title);
 //            stage.setScene(new Scene(root,900,660));
-            stage.setScene(new Scene(root,900,614));
+            stage.setScene(new Scene(root,900,600));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,9 +83,15 @@ public abstract class Controller implements Observer, IView {
         );
     }
 
+//    public void handlePropertiesButton() {
+//        showAlert("Configuration Properties",
+//                "Game Properties:\n\n\tMaze Generator Type - My Maze Generator\n\n\tSolving Algorithm - Breadth First Search\n\n\tThread Pool Size - 3");
+//    }
+
     public void handlePropertiesButton() {
-        showAlert("Configuration Properties",
-                "Game Properties:\n\n\tMaze Generator Type - My Maze Generator\n\n\tSolving Algorithm - Breadth First Search\n\n\tThread Pool Size - 3");
+        Stage propStage = new Stage();
+        changeScene("../View/Properties.fxml",propStage,"Properties");
+
     }
 
     //Alert for Information

@@ -40,6 +40,7 @@ public class MenuBarController extends Controller {
         handlePropertiesButton();
     }
 
+
     public void handleExit() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to exit?");
         Optional<ButtonType> result = alert.showAndWait();

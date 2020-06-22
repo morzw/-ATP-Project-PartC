@@ -9,7 +9,6 @@ import Server.ServerStrategySolveSearchProblem;
 import ViewModel.MyViewModel;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
-import algorithms.search.SearchableMaze;
 import algorithms.search.Solution;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,6 +51,9 @@ public class MyModel extends Observable implements IModel {
 
     //constructor
     private MyModel() {
+        Server.setConfigurations("MazeGenerator","MyMazeGenerator");
+        Server.setConfigurations("SearchingAlgorithm","Breadth First Search");
+        Server.setConfigurations("ThreadPoolSize","3");
         mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         mazeGeneratingServer.start();
@@ -111,8 +113,8 @@ public class MyModel extends Observable implements IModel {
         //updates sol
         for (AState state:mazeSolutionSteps) {
             int[] currPosState = new int[2];
-            currPosState[0] = getRowState(state);
-            currPosState[1] = getColState(state);
+            currPosState[0] = state.getRowState();
+            currPosState[1] = state.getColState();
             sol.add(currPosState);
         }
         LOG.info("Solution for a maze was created");
@@ -120,18 +122,6 @@ public class MyModel extends Observable implements IModel {
         notifyObservers("solve");
     }
 
-    //from partB - change to public and add new jar
-    private int getRowState(AState state) {
-        int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0, index));
-        return row;
-    }
-
-    private int getColState(AState state) {
-        int index = state.getName().indexOf(",");
-        int col = Integer.parseInt(state.getName().substring(index+1));
-        return col;
-    }
 
     private void CommunicateWithServer_SolveSearchProblem() {
         try {
