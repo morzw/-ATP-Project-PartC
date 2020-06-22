@@ -343,3 +343,16 @@
 2020.06.22 18:12:02.012 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
 2020.06.22 18:12:09.819 INFO  Model.MyModel - Generate maze server stopped
 2020.06.22 18:12:09.820 INFO  Model.MyModel - Solve maze server stopped
+2020.06.22 19:40:37.480 INFO  Model.MyModel - Generate maze server started
+2020.06.22 19:40:37.485 INFO  Model.MyModel - Solve maze server started
+2020.06.22 19:40:45.420 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.22 19:40:56.554 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.22 19:41:02.331 INFO  Model.MyModel - Generate maze server stopped
+2020.06.22 19:41:02.331 INFO  Model.MyModel - Solve maze server stopped
+2020.06.22 19:42:11.259 INFO  Model.MyModel - Generate maze server started
+2020.06.22 19:42:11.262 INFO  Model.MyModel - Solve maze server started
+2020.06.22 19:42:31.038 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 20 X 10
+2020.06.22 19:42:44.275 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 20 X 20
+2020.06.22 19:42:50.313 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 20 X 10
+2020.06.22 19:42:55.622 INFO  Model.MyModel - Generate maze server stopped
+2020.06.22 19:42:55.622 INFO  Model.MyModel - Solve maze server stopped
