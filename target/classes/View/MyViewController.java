@@ -134,6 +134,11 @@ public class MyViewController extends Controller implements IView, Initializable
             int cols = Integer.valueOf(strCols);
             viewModel.generateMaze(rows, cols);
             ShowSolution.setDisable(false);
+
+            //
+            mazeDisplayer.setSolution(null);
+            mazeDisplayer.setSolved(false);
+            //
         }
         else
             showErrorAlert("Values inserted aren't valid!" +
@@ -165,13 +170,25 @@ public class MyViewController extends Controller implements IView, Initializable
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
             if (arg == "update") {
+
+                //null
+                mazeDisplayer.setSolution(null);
+                mazeDisplayer.setSolved(false);
+
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
                 mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
+
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
                 this.zoom(mazeDisplayer);
+
+                ShowSolution.setDisable(false);
+            }
+            else if (arg == "load incorrect file type")
+            {
+                showErrorAlert("You tried to upload an unsuitable file type. Please reload a file with .maze extension only.");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame())

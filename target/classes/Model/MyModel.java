@@ -52,7 +52,7 @@ public class MyModel extends Observable implements IModel {
     //constructor
     private MyModel() {
         Server.setConfigurations("MazeGenerator","MyMazeGenerator");
-        Server.setConfigurations("SearchingAlgorithm","Breadth First Search");
+        Server.setConfigurations("SearchingAlgorithm","Depth First Search");
         Server.setConfigurations("ThreadPoolSize","3");
         mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
@@ -262,12 +262,31 @@ public class MyModel extends Observable implements IModel {
             notifyObservers("load");
             file.close();
         } catch (IOException|ClassNotFoundException e) {
-            LOG.error("IO/Class Not Found Exception : ", e);
             setChanged();
             notifyObservers("load incorrect file type");
+//            LOG.error("IO/Class Not Found Exception : ", e);
+            LOG.error("IO/Class Not Found Exception : Not a maze file");
             //e.printStackTrace();
         }
     }
+
+//    public void loadUserMaze(File file) {
+//        try {
+//            FileInputStream f = new FileInputStream(file);
+//            ObjectInputStream input = new ObjectInputStream(f);
+//            maze = (Maze)input.readObject();
+//            initMaze(maze);
+//            LOG.info("A maze has been successfully uploaded from the disk");
+//            setChanged();
+//            notifyObservers("load");
+//            f.close();
+//        } catch (IOException|ClassNotFoundException e) {
+//            setChanged();
+//            notifyObservers("load incorrect file type");
+////            LOG.error("IO/Class Not Found Exception : ", e);
+//            LOG.error("IO/Class Not Found Exception : Not a maze file");
+//        }
+//    }
 
     private void initMaze(Maze newMaze) {
         mazeArray = maze.getMaze();
@@ -276,6 +295,9 @@ public class MyModel extends Observable implements IModel {
         goalPosRow = maze.getGoalPosition().getRowIndex();
         goalPosCol = maze.getGoalPosition().getColumnIndex();
         wonGame = false;
+        //
+        mazeSolutionSteps = null;
+        sol = null;
     }
 
     @Override

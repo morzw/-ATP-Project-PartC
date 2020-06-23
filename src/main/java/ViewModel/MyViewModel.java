@@ -2,10 +2,12 @@ package ViewModel;
 
 import Model.IModel;
 import Model.MyModel;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
@@ -59,6 +61,9 @@ public class MyViewModel extends Observable implements Observer {
                 currPosCol = model.getCurrPosCol();
                 goalPosRow = model.getGoalPosRow();
                 goalPosCol = model.getGoalPosCol();
+                //
+                //solution = model.getSol();
+
                 setChanged();
                 notifyObservers("update");
             }
@@ -88,6 +93,7 @@ public class MyViewModel extends Observable implements Observer {
 
     //generate maze
     public void generateMaze(int row, int col) {
+        solution = null;
         model.generateMaze(row, col);
     }
 
@@ -102,6 +108,12 @@ public class MyViewModel extends Observable implements Observer {
         if (path != null)
             model.loadUserMaze(path);
     }
+
+//    public void loadMaze(File file) {
+//        if (file != null)
+//            model.loadUserMaze(file);
+//
+//    }
 
     //move character
     public void moveCharacter(KeyEvent keyEvent) {

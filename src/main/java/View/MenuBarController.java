@@ -52,6 +52,7 @@ public class MenuBarController extends Controller {
     }
 
     @Override
-    public void update(Observable o, Object arg) {}
+    public void update(Observable o, Object arg) {
+    }
 
 }

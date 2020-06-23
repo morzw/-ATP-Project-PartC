@@ -49,6 +49,7 @@ public abstract class Controller implements Observer, IView {
                 if (changeScene)
                     changeScene("../View/MyView.fxml",stage,"Load Maze");
                 viewModel.loadMaze(file.getPath());
+//                viewModel.loadMaze(file);
             }
             else
                 showAlert("Load Maze","No path selected, Please try again.");

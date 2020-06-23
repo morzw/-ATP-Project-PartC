@@ -21,6 +21,22 @@ public class MazeDisplayer extends Canvas {
     private boolean isSolved;
     private ArrayList<int[]> solution;
 
+//    public boolean isSolved() {
+//        return isSolved;
+//    }
+
+    public void setSolved(boolean solved) {
+        isSolved = solved;
+    }
+
+    public ArrayList<int[]> getSolution() {
+        return solution;
+    }
+
+    public void setSolution(ArrayList<int[]> solution) {
+        this.solution = solution;
+    }
+
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
     StringProperty imageFileNameTarget = new SimpleStringProperty();
@@ -184,5 +200,6 @@ public class MazeDisplayer extends Canvas {
         solution = sol;
         draw();
     }
+
 
 }
