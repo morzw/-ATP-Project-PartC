@@ -49,7 +49,6 @@ public abstract class Controller implements Observer, IView {
                 if (changeScene)
                     changeScene("../View/MyView.fxml",stage,"Load Maze");
                 viewModel.loadMaze(file.getPath());
-//                viewModel.loadMaze(file);
             }
             else
                 showAlert("Load Maze","No path selected, Please try again.");
@@ -84,10 +83,6 @@ public abstract class Controller implements Observer, IView {
         );
     }
 
-//    public void handlePropertiesButton() {
-//        showAlert("Configuration Properties",
-//                "Game Properties:\n\n\tMaze Generator Type - My Maze Generator\n\n\tSolving Algorithm - Breadth First Search\n\n\tThread Pool Size - 3");
-//    }
 
     public void handlePropertiesButton() {
         Stage propStage = new Stage();

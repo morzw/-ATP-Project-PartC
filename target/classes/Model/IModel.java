@@ -2,6 +2,8 @@ package Model;
 
 import ViewModel.MyViewModel;
 
+import java.io.File;
+
 public interface IModel {
 
     void generateMaze(int row, int col);
@@ -10,6 +12,8 @@ public interface IModel {
     void stopServers();
     void saveMazeToFile(String filePath);
     void loadUserMaze (String filePath);
+//    void loadUserMaze (File file);
+
     void addObserver(MyViewModel viewModel);
 
 }

@@ -109,11 +109,6 @@ public class MyViewModel extends Observable implements Observer {
             model.loadUserMaze(path);
     }
 
-//    public void loadMaze(File file) {
-//        if (file != null)
-//            model.loadUserMaze(file);
-//
-//    }
 
     //move character
     public void moveCharacter(KeyEvent keyEvent) {

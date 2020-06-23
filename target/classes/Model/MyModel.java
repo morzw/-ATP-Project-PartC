@@ -270,23 +270,6 @@ public class MyModel extends Observable implements IModel {
         }
     }
 
-//    public void loadUserMaze(File file) {
-//        try {
-//            FileInputStream f = new FileInputStream(file);
-//            ObjectInputStream input = new ObjectInputStream(f);
-//            maze = (Maze)input.readObject();
-//            initMaze(maze);
-//            LOG.info("A maze has been successfully uploaded from the disk");
-//            setChanged();
-//            notifyObservers("load");
-//            f.close();
-//        } catch (IOException|ClassNotFoundException e) {
-//            setChanged();
-//            notifyObservers("load incorrect file type");
-////            LOG.error("IO/Class Not Found Exception : ", e);
-//            LOG.error("IO/Class Not Found Exception : Not a maze file");
-//        }
-//    }
 
     private void initMaze(Maze newMaze) {
         mazeArray = maze.getMaze();

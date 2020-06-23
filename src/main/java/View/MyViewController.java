@@ -149,11 +149,13 @@ public class MyViewController extends Controller implements IView, Initializable
     {
         viewModel.solve();
         HideSolution.setDisable(false);
+        ShowSolution.setDisable(true);
     }
 
     public void hideSolution() {
         mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
         HideSolution.setDisable(true);
+        ShowSolution.setDisable(false);
     }
 
     //move character
@@ -170,11 +172,8 @@ public class MyViewController extends Controller implements IView, Initializable
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
             if (arg == "update") {
-
-                //null
                 mazeDisplayer.setSolution(null);
                 mazeDisplayer.setSolved(false);
-
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
@@ -185,6 +184,8 @@ public class MyViewController extends Controller implements IView, Initializable
                 this.zoom(mazeDisplayer);
 
                 ShowSolution.setDisable(false);
+                HideSolution.setDisable(true);
+
             }
             else if (arg == "load incorrect file type")
             {
