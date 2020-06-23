@@ -55,6 +55,7 @@ public class PropertiesController extends Controller{
             Server.setConfigurations("SearchingAlgorithm", solvingAlgorithm.getText());
             ((Stage)apply.getScene().getWindow()).close();
             System.out.println("Pressed APPLY");
+
         }
 
     }

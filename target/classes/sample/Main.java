@@ -34,8 +34,7 @@ public class Main extends Application {
 
         Rectangle2D openingScene = Screen.getPrimary().getBounds();
         primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
-//        primaryStage.setScene(new Scene(root,openingScene.getWidth()-500,openingScene.getHeight()-100));
-        primaryStage.setScene(new Scene(root,768,614)); //check
+        primaryStage.setScene(new Scene(root,900,614)); //check
         primaryStage.setResizable(true);
         primaryStage.show();
 

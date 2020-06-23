@@ -74,7 +74,7 @@ public class MyModel extends Observable implements IModel {
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
         initMaze(maze);
-        LOG.info("A new maze has been created. Maze dimensions - "+row+ " X " +col);
+        LOG.info("A new maze has been created. Maze dimensions - " + row + " X " + col);
         setChanged();
         notifyObservers("generate");
     }
@@ -83,6 +83,9 @@ public class MyModel extends Observable implements IModel {
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5400, (IClientStrategy) (inFromServer, outToServer) -> {
                 try {
+                    LOG.info("User info " + InetAddress.getLocalHost() + "requests to generate a maze");
+                    LOG.info("A maze creation request was accepted! Generating maze using " +
+                            Server.getConfigurations("MazeGenerator"));
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
@@ -117,7 +120,7 @@ public class MyModel extends Observable implements IModel {
             currPosState[1] = state.getColState();
             sol.add(currPosState);
         }
-        LOG.info("Solution for a maze was created");
+        LOG.info("A solution for the maze was created. Solution number of steps - " + mazeSolutionSteps.size());
         setChanged();
         notifyObservers("solve");
     }
@@ -127,6 +130,9 @@ public class MyModel extends Observable implements IModel {
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5401, (IClientStrategy) (inFromServer, outToServer) -> {
                 try {
+                    LOG.info("User info " + InetAddress.getLocalHost() + "requests to solve a maze");
+                    LOG.info("A maze resolution request was accepted! Solving maze using " +
+                            Server.getConfigurations("SearchingAlgorithm"));
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
