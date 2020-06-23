@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -33,7 +34,7 @@ import java.util.ResourceBundle;
 public class MyViewController extends Controller implements IView, Initializable  {
 
     @FXML
-    public TextField textFielMazeRows;
+    public TextField textField_mazeRows;
     @FXML
     public TextField textField_mazeColumns;
     @FXML
@@ -110,6 +111,7 @@ public class MyViewController extends Controller implements IView, Initializable
             if (viewModel.getMazeArray() != null)
                 mazeDisplayer.draw();
         });
+
     }
 
     //validation check for generate maze
@@ -127,13 +129,15 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
-        String strRows = textFielMazeRows.getText();
+        String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
             int rows = Integer.valueOf(strRows);
             int cols = Integer.valueOf(strCols);
             viewModel.generateMaze(rows, cols);
             ShowSolution.setDisable(false);
+            mazeDisplayer.setSolution(null);
+            mazeDisplayer.setSolved(false);
         }
         else
             showErrorAlert("Values inserted aren't valid!" +
@@ -167,6 +171,8 @@ public class MyViewController extends Controller implements IView, Initializable
     public void update(Observable o, Object arg) {
         if (o instanceof MyViewModel) {
             if (arg == "update") {
+                mazeDisplayer.setSolution(null);
+                mazeDisplayer.setSolved(false);
                 mazeDisplayer.setMaze(viewModel.getMazeArray());
                 mazeDisplayer.set_goal_position(viewModel.getGoalPosRow(), viewModel.getGoalPosCol());
                 mazeDisplayer.set_player_position(viewModel.getCurrPosRow(), viewModel.getCurrPosCol());
@@ -176,6 +182,10 @@ public class MyViewController extends Controller implements IView, Initializable
                 this.zoom(mazeDisplayer);
                 ShowSolution.setDisable(false);
                 HideSolution.setDisable(true);
+            }
+            else if (arg == "load incorrect file type")
+            {
+                showErrorAlert("You tried to upload an unsuitable file type. Please reload a file with .maze extension only.");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame())
@@ -241,7 +251,7 @@ public class MyViewController extends Controller implements IView, Initializable
     }
 
     //zoom in/out
-    public void zoom(MazeDisplayer pane) {
+    private void zoom(MazeDisplayer pane) {
         pane.setOnScroll(
             new EventHandler<ScrollEvent>() {
                 @Override

@@ -70,15 +70,6 @@ public class MyModel extends Observable implements IModel {
         return myModel;
     }
 
-    public void startServers() {
-        mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
-        solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
-        mazeGeneratingServer.start();
-        LOG.info("Generate maze server started");
-        solveSearchProblemServer.start();
-        LOG.info("Solve maze server started");
-    }
-
     @Override
     public void generateMaze(int row, int col) {
         CommunicateWithServer_MazeGenerating(row, col);
@@ -122,13 +113,6 @@ public class MyModel extends Observable implements IModel {
     public void solveMaze() {
         sol = new ArrayList<>();
         CommunicateWithServer_SolveSearchProblem();
-        stopServers();
-        try {
-            Thread.sleep(1000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        startServers();
         //updates sol
         for (AState state:mazeSolutionSteps) {
             int[] currPosState = new int[2];
@@ -141,7 +125,6 @@ public class MyModel extends Observable implements IModel {
         notifyObservers("solve");
     }
 
-
     private void CommunicateWithServer_SolveSearchProblem() {
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5401, (IClientStrategy) (inFromServer, outToServer) -> {
@@ -152,7 +135,7 @@ public class MyModel extends Observable implements IModel {
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
-                    maze.setStartPosition(currPosRow, currPosCol);
+//                    maze.setStartPosition(currPosRow, currPosCol);
                     toServer.writeObject(maze);
                     toServer.flush();
                     Solution mazeSolution = (Solution)fromServer.readObject();
@@ -169,7 +152,6 @@ public class MyModel extends Observable implements IModel {
         }
     }
 
-    //need to add diagonal moves!!!
     @Override
     public void updateCharacterLocation(int direction) {
         /*
@@ -278,7 +260,7 @@ public class MyModel extends Observable implements IModel {
             notifyObservers("load");
             file.close();
         } catch (IOException|ClassNotFoundException e) {
-            LOG.error("IO/Class Not Found Exception : ", e);
+            LOG.error("IO/Class Not Found Exception : ", "Not a maze file");
             setChanged();
             notifyObservers("load incorrect file type");
             //e.printStackTrace();
@@ -292,6 +274,8 @@ public class MyModel extends Observable implements IModel {
         goalPosRow = maze.getGoalPosition().getRowIndex();
         goalPosCol = maze.getGoalPosition().getColumnIndex();
         wonGame = false;
+        mazeSolutionSteps = null;
+        sol = null;
     }
 
     @Override

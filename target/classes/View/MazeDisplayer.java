@@ -21,6 +21,12 @@ public class MazeDisplayer extends Canvas {
     private boolean isSolved;
     private ArrayList<int[]> solution;
 
+    public void setSolved(boolean solved) { isSolved = solved; }
+
+    public ArrayList<int[]> getSolution() { return solution; }
+
+    public void setSolution(ArrayList<int[]> solution) { this.solution = solution; }
+
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
     StringProperty imageFileNameTarget = new SimpleStringProperty();
@@ -58,11 +64,11 @@ public class MazeDisplayer extends Canvas {
         this.imageFileNamePlayer.set(imageFileNamePlayer);
     }
 
-    public int getRow_player() {
+    private int getRow_player() {
         return row_player;
     }
 
-    public int getCol_player() {
+    private int getCol_player() {
         return col_player;
     }
 
@@ -72,9 +78,9 @@ public class MazeDisplayer extends Canvas {
         draw();
     }
 
-    public int getRow_goal() { return row_goal; }
+    private int getRow_goal() { return row_goal; }
 
-    public int getCol_goal() { return col_goal; }
+    private int getCol_goal() { return col_goal; }
 
     public void set_goal_position(int row, int col) {
         this.row_goal = row;

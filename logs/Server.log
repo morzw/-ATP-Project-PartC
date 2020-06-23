@@ -388,3 +388,466 @@
 2020.06.23 15:12:49.873 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 7
 2020.06.23 15:17:00.520 INFO  Model.MyModel - Generate maze server stopped
 2020.06.23 15:17:00.521 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:26:22.171 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:26:22.173 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:26:25.604 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:26:25.604 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:26:25.619 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:26:26.671 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:26:26.671 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:26:26.687 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:26:26.687 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:26:27.689 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:26:27.690 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:26:27.691 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 14
+2020.06.23 15:26:29.811 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:26:29.811 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:26:29.813 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:26:32.998 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:26:32.999 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:33:33.947 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:33:33.950 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:33:37.548 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:37.549 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:37.562 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:38.560 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:38.561 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:38.563 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:39.732 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:33:39.732 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:33:39.752 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:33:39.752 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:33:40.753 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:33:40.754 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:33:40.754 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 6
+2020.06.23 15:33:42.785 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:33:42.786 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:33:42.794 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:33:42.794 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:33:43.794 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:33:43.795 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:33:43.796 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 6
+2020.06.23 15:33:46.349 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:46.349 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:46.351 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:46.550 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:46.551 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:46.553 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:47.859 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:33:47.859 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:33:47.864 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:33:47.864 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:33:48.865 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:33:48.866 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:33:48.867 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 8
+2020.06.23 15:33:51.189 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:51.190 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:51.191 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:51.887 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:33:51.887 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:33:51.892 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:33:51.892 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:33:52.892 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:33:52.894 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:33:52.895 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 9
+2020.06.23 15:33:52.936 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:33:52.937 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:33:52.938 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:33:55.887 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:33:55.887 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:34:29.380 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:34:29.382 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:34:32.813 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:32.813 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:32.826 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:33.354 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:33.354 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:33.356 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:33.920 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:33.920 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:33.921 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:34.258 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:34.258 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:34.259 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:34.425 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:34.425 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:34.426 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:34.889 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:34.890 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:34.891 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.072 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.073 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.074 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.244 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.244 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.245 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.425 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.426 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.426 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.598 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.598 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.599 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.755 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.755 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.757 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:35.906 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:35.906 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:35.908 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:36.055 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:36.055 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:36.057 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:36.219 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:34:36.219 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:34:36.221 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:34:38.900 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:34:38.900 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:11:16.810 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:11:16.812 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:11:22.002 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 17:11:22.002 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 17:11:22.010 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 17:11:28.263 INFO  Model.MyModel - The user won the game
+2020.06.23 17:11:32.109 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:11:32.109 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:37:36.199 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:37:36.202 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:37:52.754 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:37:52.755 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:37:56.399 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:37:56.402 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:38:06.527 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:38:06.528 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:39:48.062 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:39:48.065 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:40:24.202 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:40:24.202 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:40:35.436 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:40:35.439 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:41:05.754 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 17:41:05.754 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 17:41:05.775 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 17:41:14.775 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:41:14.776 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:41:35.458 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:41:35.461 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:41:47.653 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 17:41:47.653 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 17:41:47.667 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 17:41:58.535 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:41:58.535 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:42:28.404 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:42:28.407 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:42:32.336 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 17:42:32.336 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 17:42:32.348 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 17:42:36.955 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:42:36.955 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:44:15.311 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:44:15.314 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:44:18.317 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:44:18.318 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:44:22.046 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:44:22.049 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:44:28.718 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:44:28.719 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 17:45:54.409 INFO  Model.MyModel - Generate maze server started
+2020.06.23 17:45:54.412 INFO  Model.MyModel - Solve maze server started
+2020.06.23 17:46:03.611 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 17:46:03.611 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 19:25:56.460 INFO  Model.MyModel - Generate maze server started
+2020.06.23 19:25:56.463 INFO  Model.MyModel - Solve maze server started
+2020.06.23 19:26:09.972 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:26:09.973 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:26:09.983 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:26:12.020 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:26:12.020 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:26:12.032 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 16
+2020.06.23 19:26:16.553 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:26:16.554 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:26:16.573 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 19
+2020.06.23 19:26:21.079 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:26:21.080 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:26:21.082 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:26:23.802 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:26:23.803 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:26:23.810 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 13
+2020.06.23 19:26:30.314 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:26:30.314 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:27:14.499 INFO  Model.MyModel - Generate maze server started
+2020.06.23 19:27:14.501 INFO  Model.MyModel - Solve maze server started
+2020.06.23 19:27:17.849 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:27:17.849 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:27:17.859 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:27:19.317 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:27:19.317 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:27:19.329 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 7
+2020.06.23 19:27:23.097 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:27:23.098 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:27:25.894 ERROR Model.MyModel - Exception: 
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2960) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1540) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431) ~[?:1.8.0_191]
+	at Model.MyModel.lambda$CommunicateWithServer_SolveSearchProblem$1(MyModel.java:141) ~[classes/:?]
+	at Client.Client.communicateWithServer(Client.java:28) ~[ATPProjectJAR.jar:?]
+	at Model.MyModel.CommunicateWithServer_SolveSearchProblem(MyModel.java:148) ~[classes/:?]
+	at Model.MyModel.solveMaze(MyModel.java:115) ~[classes/:?]
+	at ViewModel.MyViewModel.solve(MyViewModel.java:153) ~[classes/:?]
+	at View.MyViewController.solveMaze(MyViewController.java:149) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_191]
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_191]
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Node.fireEvent(Node.java:8411) ~[jfxrt.jar:?]
+	at javafx.scene.control.Button.fire(Button.java:185) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485) ~[jfxrt.jar:?]
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_191]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$353(GlassViewEventHandler.java:432) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(View.java:937) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+2020.06.23 19:27:25.902 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 7
+2020.06.23 19:27:27.001 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 19:27:27.001 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 19:28:30.905 INFO  Model.MyModel - Generate maze server started
+2020.06.23 19:28:30.909 INFO  Model.MyModel - Solve maze server started
+2020.06.23 19:28:36.024 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:28:36.025 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:28:36.032 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:28:38.003 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:28:38.004 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:28:38.018 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 14
+2020.06.23 19:28:42.372 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:28:42.372 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:28:42.382 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 15
+2020.06.23 19:28:50.477 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:28:50.477 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:28:50.483 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 14
+2020.06.23 19:28:54.029 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:28:54.029 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:28:54.030 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:28:55.815 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:28:55.816 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:28:55.835 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 12
+2020.06.23 19:29:01.251 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:29:01.251 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:29:01.270 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 19:29:06.269 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:29:06.270 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:29:06.709 ERROR Model.MyModel - Exception: 
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2960) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1540) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431) ~[?:1.8.0_191]
+	at Model.MyModel.lambda$CommunicateWithServer_SolveSearchProblem$1(MyModel.java:141) ~[classes/:?]
+	at Client.Client.communicateWithServer(Client.java:28) ~[ATPProjectJAR.jar:?]
+	at Model.MyModel.CommunicateWithServer_SolveSearchProblem(MyModel.java:148) ~[classes/:?]
+	at Model.MyModel.solveMaze(MyModel.java:115) ~[classes/:?]
+	at ViewModel.MyViewModel.solve(MyViewModel.java:153) ~[classes/:?]
+	at View.MyViewController.solveMaze(MyViewController.java:149) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_191]
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_191]
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Node.fireEvent(Node.java:8411) ~[jfxrt.jar:?]
+	at javafx.scene.control.Button.fire(Button.java:185) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485) ~[jfxrt.jar:?]
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_191]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$353(GlassViewEventHandler.java:432) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(View.java:937) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+2020.06.23 19:29:06.726 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 19:29:13.166 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 19:29:13.166 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 19:33:58.711 INFO  Model.MyModel - Generate maze server started
+2020.06.23 19:33:58.714 INFO  Model.MyModel - Solve maze server started
+2020.06.23 19:34:01.853 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:34:01.854 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:34:01.861 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:34:03.957 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:34:03.957 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:34:03.975 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 3
+2020.06.23 19:34:08.503 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:34:08.503 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:34:08.507 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 3
+2020.06.23 19:34:10.629 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 19:34:10.630 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 19:34:10.631 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 19:34:12.072 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 19:34:12.073 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 19:34:15.206 ERROR Model.MyModel - Exception: 
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2960) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1540) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431) ~[?:1.8.0_191]
+	at Model.MyModel.lambda$CommunicateWithServer_SolveSearchProblem$1(MyModel.java:141) ~[classes/:?]
+	at Client.Client.communicateWithServer(Client.java:28) ~[ATPProjectJAR.jar:?]
+	at Model.MyModel.CommunicateWithServer_SolveSearchProblem(MyModel.java:148) ~[classes/:?]
+	at Model.MyModel.solveMaze(MyModel.java:115) ~[classes/:?]
+	at ViewModel.MyViewModel.solve(MyViewModel.java:153) ~[classes/:?]
+	at View.MyViewController.solveMaze(MyViewController.java:149) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_191]
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_191]
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Node.fireEvent(Node.java:8411) ~[jfxrt.jar:?]
+	at javafx.scene.control.Button.fire(Button.java:185) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485) ~[jfxrt.jar:?]
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_191]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$353(GlassViewEventHandler.java:432) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(View.java:937) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+2020.06.23 19:34:20.426 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 19:34:20.426 INFO  Model.MyModel - Solve maze server stopped

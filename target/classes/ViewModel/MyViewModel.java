@@ -88,6 +88,7 @@ public class MyViewModel extends Observable implements Observer {
 
     //generate maze
     public void generateMaze(int row, int col) {
+        solution = null;
         model.generateMaze(row, col);
     }
 
