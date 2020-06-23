@@ -1,0 +1,390 @@
+2020.06.23 12:26:08.422 INFO  Model.MyModel - Generate maze server started
+2020.06.23 12:26:08.428 INFO  Model.MyModel - Solve maze server started
+2020.06.23 12:26:13.961 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 12:26:19.194 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 12:26:19.195 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 12:26:54.850 INFO  Model.MyModel - Generate maze server started
+2020.06.23 12:26:54.855 INFO  Model.MyModel - Solve maze server started
+2020.06.23 12:27:00.341 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 12:27:01.100 INFO  Model.MyModel - Solution for a maze was created
+2020.06.23 12:27:04.308 INFO  Model.MyModel - Solution for a maze was created
+2020.06.23 12:27:05.511 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 12:29:13.891 INFO  Model.MyModel - Generate maze server started
+2020.06.23 12:29:13.896 INFO  Model.MyModel - Solve maze server started
+2020.06.23 12:29:24.429 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 12:29:24.430 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 12:29:35.903 INFO  Model.MyModel - Generate maze server started
+2020.06.23 12:29:35.909 INFO  Model.MyModel - Solve maze server started
+2020.06.23 12:29:41.022 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 12:29:44.192 INFO  Model.MyModel - Solution for a maze was created
+2020.06.23 12:35:26.446 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 12:35:26.446 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 13:38:04.977 INFO  Model.MyModel - Generate maze server started
+2020.06.23 13:38:04.980 INFO  Model.MyModel - Solve maze server started
+2020.06.23 13:38:12.405 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 13:38:12.406 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 13:38:12.420 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 13:38:27.569 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 13:38:27.569 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 13:38:27.591 INFO  Model.MyModel - Solution for a maze was created. Solution number of steps - 11
+2020.06.23 13:39:09.211 INFO  Model.MyModel - Generate maze server started
+2020.06.23 13:39:09.214 INFO  Model.MyModel - Solve maze server started
+2020.06.23 13:39:15.871 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 13:39:15.872 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 13:39:15.885 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 13:39:20.379 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 13:39:20.379 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 13:39:20.401 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 12
+2020.06.23 13:39:27.124 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 13:39:27.124 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 13:39:27.130 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 12
+2020.06.23 13:39:36.613 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 13:39:36.614 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 13:39:36.616 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 13:39:49.235 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 13:39:49.236 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:21:03.760 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:21:03.764 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:21:07.946 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:21:07.947 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:21:07.954 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:21:08.890 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:21:08.890 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:21:08.913 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:21:12.516 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:21:12.516 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:21:12.518 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:21:14.620 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:21:14.621 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:30:49.765 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:30:49.767 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:30:55.063 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:30:55.063 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:30:55.074 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:30:56.631 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:30:56.632 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:30:56.650 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 19
+2020.06.23 14:30:59.930 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:30:59.930 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:30:59.936 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 19
+2020.06.23 14:31:03.582 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:31:03.582 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:31:03.584 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:31:06.509 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:31:06.510 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:33:23.517 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:33:23.520 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:33:27.209 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:33:27.209 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:33:27.217 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:33:31.126 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:33:31.126 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:33:31.140 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:33:35.266 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:33:35.266 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:33:35.269 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:33:37.320 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:33:37.321 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:33:37.326 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:33:43.424 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:33:43.425 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:33:43.426 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:33:45.969 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:33:45.970 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:38:44.795 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:38:44.798 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:39:02.877 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:39:02.877 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:39:02.886 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:39:06.943 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:39:06.943 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:39:06.944 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:39:07.734 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:39:07.735 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:39:07.736 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:39:08.612 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:39:08.613 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:39:08.631 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 17
+2020.06.23 14:39:14.929 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:39:14.929 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:39:14.933 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 17
+2020.06.23 14:40:52.347 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 14:40:52.347 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 14:41:16.692 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:41:16.696 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:41:24.455 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:24.456 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:24.468 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:29.298 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:29.298 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:41:29.311 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 15
+2020.06.23 14:41:35.257 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:35.257 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:41:35.261 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 15
+2020.06.23 14:41:37.832 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:37.833 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:41:37.838 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 15
+2020.06.23 14:41:38.749 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:38.749 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:41:38.752 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 15
+2020.06.23 14:41:43.712 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:43.712 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:43.713 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:44.424 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:44.424 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:44.425 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:45.007 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:45.007 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:45.008 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:45.527 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:45.527 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:45.528 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:50.286 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:50.286 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:41:50.292 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 12
+2020.06.23 14:41:58.095 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:41:58.096 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:41:58.097 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:41:59.631 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:41:59.631 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:45:26.130 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:45:26.134 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:45:31.533 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:45:31.533 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:45:31.542 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:45:34.629 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:45:34.629 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:45:34.646 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:45:37.719 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:45:37.719 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:45:37.720 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:45:39.520 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:45:39.520 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:49:48.577 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:49:48.585 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:49:53.437 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:49:53.437 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:49:53.447 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:49:55.004 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:49:55.004 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:49:55.019 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 6
+2020.06.23 14:49:56.976 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:49:56.976 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:49:56.977 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:49:59.099 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:49:59.100 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:53:25.026 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:53:25.031 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:53:29.681 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:53:29.682 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:53:29.691 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:53:33.086 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:53:33.087 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:53:33.101 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 14
+2020.06.23 14:53:36.725 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:53:36.725 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:55:38.163 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:55:38.171 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:55:43.390 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:55:43.391 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:55:43.400 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:55:45.488 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:55:45.489 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:56:59.156 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:56:59.163 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:57:05.252 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:57:05.252 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:57:05.264 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:57:06.799 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:57:06.799 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:57:37.334 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 14:57:54.673 INFO  Model.MyModel - Generate maze server started
+2020.06.23 14:57:54.684 INFO  Model.MyModel - Solve maze server started
+2020.06.23 14:58:00.566 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:58:00.566 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:58:00.576 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:58:01.439 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:58:01.439 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 14:58:01.451 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 5
+2020.06.23 14:58:03.069 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 14:58:03.070 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 14:58:03.071 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 14:58:04.348 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 14:58:04.348 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:04:57.778 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:04:57.783 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:05:03.164 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:05:03.165 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:05:03.178 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:05:04.899 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:05:04.899 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:05:04.915 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:05:04.916 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:05:09.916 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:05:09.916 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:05:09.916 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 15:05:14.917 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:05:14.918 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:05:14.920 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:05:17.786 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:05:17.786 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:05:17.793 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:05:17.793 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:05:22.793 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:05:22.793 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:05:22.793 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 13
+2020.06.23 15:05:30.373 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:05:30.373 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:05:30.378 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:05:30.378 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:05:35.378 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:05:35.379 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:05:35.379 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 13
+2020.06.23 15:05:45.508 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:05:45.509 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:05:45.515 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:05:45.516 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:05:50.516 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:05:50.516 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:05:50.516 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 13
+2020.06.23 15:05:54.649 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:05:54.650 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:05:54.651 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:05:57.212 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:05:57.212 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:05:57.222 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:05:57.222 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:06:02.222 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:06:02.223 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:06:02.223 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 15:06:49.037 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:06:49.037 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:06:58.234 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:06:58.239 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:07:04.105 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:07:04.105 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:07:04.114 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:07:05.676 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:07:05.677 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:07:05.692 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:07:05.692 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:07:08.694 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:07:08.694 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:07:08.694 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 9
+2020.06.23 15:07:13.466 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:07:13.467 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:07:13.469 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:07:14.546 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:07:14.546 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:07:14.552 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:07:14.552 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:07:17.553 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:07:17.553 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:07:17.554 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 11
+2020.06.23 15:07:28.541 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:07:28.541 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:07:41.015 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:07:41.021 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:07:48.186 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:07:48.186 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:07:48.195 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:07:49.034 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:07:49.034 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:07:49.052 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:07:49.052 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:07:51.053 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:07:51.053 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:07:51.053 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 7
+2020.06.23 15:08:29.970 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:08:29.971 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:08:44.577 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:08:44.584 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:08:49.349 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:08:49.349 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:08:49.358 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:08:50.676 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:08:50.677 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:08:50.695 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:08:50.696 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:08:52.697 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:08:52.697 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:08:52.697 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 9
+2020.06.23 15:08:59.300 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:08:59.300 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:08:59.310 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:08:59.310 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:09:01.312 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:09:01.313 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:09:01.313 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 6
+2020.06.23 15:09:08.847 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:09:08.848 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:09:22.857 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:09:22.865 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:09:27.536 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:09:27.536 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:09:27.545 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:09:29.254 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:09:29.254 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:09:29.270 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:09:29.270 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:09:29.271 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:09:29.271 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:09:29.271 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 13
+2020.06.23 15:09:33.198 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:09:35.541 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:09:35.542 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:09:47.075 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:09:47.081 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:09:54.307 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:09:54.307 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:09:54.315 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:09:55.353 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:09:55.354 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:09:55.370 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:09:55.370 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:09:56.370 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:09:56.370 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:09:56.371 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 15:10:00.339 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:10:00.340 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:10:00.348 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:10:00.349 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:10:01.349 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:10:01.349 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:10:01.349 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 15:10:02.890 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:10:02.890 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:10:02.892 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:10:06.522 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:10:06.523 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:12:34.053 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:12:34.058 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:12:39.480 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:12:39.481 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:12:39.492 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:12:40.525 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:12:40.525 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:12:40.542 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:12:40.543 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:12:41.544 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:12:41.544 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:12:41.545 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 15:12:43.948 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:12:43.949 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:12:43.958 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:12:43.958 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:12:44.958 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:12:44.959 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:12:44.959 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 10
+2020.06.23 15:12:46.641 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.23 15:12:46.641 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.23 15:12:46.642 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.23 15:12:48.865 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to solve a maze
+2020.06.23 15:12:48.865 INFO  Model.MyModel - A maze resolution request was accepted! Solving maze using Breadth First Search
+2020.06.23 15:12:48.871 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:12:48.872 INFO  Model.MyModel - Solve maze server stopped
+2020.06.23 15:12:49.873 INFO  Model.MyModel - Generate maze server started
+2020.06.23 15:12:49.873 INFO  Model.MyModel - Solve maze server started
+2020.06.23 15:12:49.873 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 7
+2020.06.23 15:17:00.520 INFO  Model.MyModel - Generate maze server stopped
+2020.06.23 15:17:00.521 INFO  Model.MyModel - Solve maze server stopped

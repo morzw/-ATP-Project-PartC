@@ -144,11 +144,13 @@ public class MyViewController extends Controller implements IView, Initializable
     {
         viewModel.solve();
         HideSolution.setDisable(false);
+        ShowSolution.setDisable(true);
     }
 
     public void hideSolution() {
         mazeDisplayer.drawMaze(mazeDisplayer.getMaze());
         HideSolution.setDisable(true);
+        ShowSolution.setDisable(false);
     }
 
     //move character
@@ -172,6 +174,8 @@ public class MyViewController extends Controller implements IView, Initializable
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
                 this.zoom(mazeDisplayer);
+                ShowSolution.setDisable(false);
+                HideSolution.setDisable(true);
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame())
