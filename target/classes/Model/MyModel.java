@@ -130,7 +130,7 @@ public class MyModel extends Observable implements IModel {
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
-                    maze.setStartPosition(currPosRow, currPosCol);
+                    //maze.setStartPosition(currPosRow, currPosCol);
                     toServer.writeObject(maze);
                     toServer.flush();
                     Solution mazeSolution = (Solution)fromServer.readObject();
