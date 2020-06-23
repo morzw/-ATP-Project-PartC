@@ -15,6 +15,11 @@ public class MenuBarController extends Controller {
     @FXML
     public Label exitLable;
 
+//    public MenuBar getMenuBar() { return menuBar; }
+//
+//    public void setMenuBar(MenuBar menuBar) {
+//        this.menuBar = menuBar;
+//    }
 
     public void handleNewFile(ActionEvent actionEvent) {
         changeScene("../View/MyView.fxml",(Stage)menuBar.getScene().getWindow(),"New Maze");
