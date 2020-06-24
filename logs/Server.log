@@ -2787,3 +2787,95 @@ java.io.EOFException: null
 2020.06.24 19:08:59.953 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
 2020.06.24 19:09:03.498 INFO  Model.MyModel - Generate maze server stopped
 2020.06.24 19:09:03.499 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:11:41.210 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:11:41.213 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:11:45.654 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:11:45.655 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:11:45.664 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:11:53.427 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:11:53.427 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:13:50.646 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:13:50.649 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:13:54.988 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:13:54.988 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:13:55.002 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:14:00.743 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:14:00.743 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:14:13.392 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:14:13.395 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:14:17.970 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:14:17.970 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:14:17.984 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:14:22.218 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:14:22.218 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:14:31.968 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:14:31.971 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:14:35.631 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:14:35.632 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:14:35.644 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:14:43.396 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:14:43.397 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:17:20.708 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:17:20.711 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:17:24.345 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:17:24.346 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:17:24.355 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:17:33.451 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:17:33.452 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:17:47.218 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:17:47.221 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:17:50.824 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:17:50.825 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:17:50.834 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:18:03.302 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:18:03.303 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:26:10.080 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:26:10.083 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:26:18.285 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:26:18.285 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:26:18.298 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:27:06.830 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:27:06.830 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:27:14.956 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:27:14.959 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:27:18.546 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:27:18.547 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:27:18.560 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:27:26.525 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:27:26.525 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:27:56.514 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:27:56.517 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:27:59.898 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:27:59.898 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:27:59.912 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:28:09.290 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:28:09.291 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:32:23.714 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:32:23.717 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:32:28.150 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:32:28.150 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:32:28.163 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:32:36.094 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:32:36.095 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:35:12.916 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:35:12.918 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:35:16.187 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:35:16.188 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:35:16.201 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:35:25.323 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:35:25.323 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:35:44.360 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:35:44.364 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:35:48.655 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:35:48.655 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:35:48.668 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:35:53.273 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:35:53.274 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 20:37:26.062 INFO  Model.MyModel - Generate maze server started
+2020.06.24 20:37:26.065 INFO  Model.MyModel - Solve maze server started
+2020.06.24 20:37:29.533 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 20:37:29.533 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 20:37:29.546 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 20:37:40.300 INFO  Model.MyModel - The user won the game
+2020.06.24 20:37:45.009 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 20:37:45.010 INFO  Model.MyModel - Solve maze server stopped

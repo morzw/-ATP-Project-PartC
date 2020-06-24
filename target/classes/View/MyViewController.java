@@ -111,6 +111,7 @@ public class MyViewController extends Controller implements IView, Initializable
             if (viewModel.getMazeArray() != null)
                 mazeDisplayer.draw();
         });
+        pane.toBack();
     }
 
     //validation check for generate maze
@@ -259,16 +260,19 @@ public class MyViewController extends Controller implements IView, Initializable
             new EventHandler<ScrollEvent>() {
                 @Override
                 public void handle(ScrollEvent event) {
-                    double zoomFactor = 1.05;
-                    double deltaY = event.getDeltaY();
+                    if (event.isControlDown()) {
+                        double zoomFactor = 1.05;
+                        double deltaY = event.getDeltaY();
 
-                    if (deltaY < 0) {
-                        zoomFactor = 0.95;
+                        if (deltaY < 0) {
+                            zoomFactor = 0.95;
+                        }
+                        pane.setScaleX(pane.getScaleX() * zoomFactor);
+                        pane.setScaleY(pane.getScaleY() * zoomFactor);
+                        event.consume();
                     }
-                    pane.setScaleX(pane.getScaleX() * zoomFactor);
-                    pane.setScaleY(pane.getScaleY() * zoomFactor);
-                    event.consume();
                 }
             });
     }
+
 }
