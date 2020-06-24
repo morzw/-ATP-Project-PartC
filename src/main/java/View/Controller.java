@@ -2,14 +2,12 @@ package View;
 
 import ViewModel.MyViewModel;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -118,8 +116,7 @@ public abstract class Controller implements Observer, IView {
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message);
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
+        if (result.get() == ButtonType.OK)
             stage.close();
-        }
     }
 }
