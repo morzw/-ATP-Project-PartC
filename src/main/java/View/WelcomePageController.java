@@ -3,6 +3,7 @@ package View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.stage.Stage;
 
@@ -45,5 +46,9 @@ public class WelcomePageController extends Controller implements Initializable {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    public void properties() {
+        handlePropertiesButton();
     }
 }

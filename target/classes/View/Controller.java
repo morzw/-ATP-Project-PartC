@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
+import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Observer;
+import java.util.Optional;
 
 public abstract class Controller implements Observer, IView {
 
@@ -103,5 +106,15 @@ public abstract class Controller implements Observer, IView {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText(message);
         alert.show();
+    }
+
+
+    public void showConformationAlert(String message, Stage stage)
+    {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message);
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) { //want to exit the game
+            stage.close();
+        }
     }
 }

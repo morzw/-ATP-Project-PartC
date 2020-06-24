@@ -6,34 +6,65 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.Label?>
-<AnchorPane onMouseClicked="#handleBackToAbout" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AboutUsPageController">
-   <Button fx:id="backToAbout" alignment="CENTER_RIGHT" layoutX="154.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#handleBackToAbout" prefHeight="80.0" prefWidth="232.0" text="Back to About" textAlignment="RIGHT">
-      <opaqueInsets>
-         <Insets />
-      </opaqueInsets>
-      <font>
-         <Font name="Gabriola" size="26.0" />
-      </font>
-      <graphic>
-         <ImageView fitHeight="59.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../resources/Images/back.png" />
-            </image>
-         </ImageView>
-      </graphic>
-   </Button>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="627.0" stylesheets="@AboutUs.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AboutUsPageController">
    <children>
-      <Label layoutX="76.0" layoutY="49.0" text="Gal Agasi">
+      <Text fill="WHITE" layoutX="23.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gal Agasi" wrappingWidth="107.4700927734375">
          <font>
-            <Font name="Gabriola" size="47.0" />
+            <Font name="Gabriola" size="33.0" />
          </font>
-      </Label>
-      <Label layoutX="390.0" layoutY="49.0" text="Mor Zweig">
+      </Text>
+      <Button fx:id="backToAbout" alignment="CENTER_RIGHT" layoutX="152.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#handleBackToAbout" prefHeight="90.0" prefWidth="254.0" text="Back to About" textAlignment="RIGHT">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
          <font>
-            <Font name="Gabriola" size="47.0" />
+            <Font name="Gabriola" size="26.0" />
          </font>
-      </Label>
+         <graphic>
+            <ImageView fx:id="backImage" fitHeight="68.0" fitWidth="60.0" onMouseClicked="#handleBackToAbout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/Images/backNew.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="WHITE" layoutX="338.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mor Zweig" wrappingWidth="136.80344015359879">
+         <font>
+            <Font name="Gabriola" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="67.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are second year students at the ISE department and our GOAL is to make you enjoy the SpongeBoe's MAZE!" textAlignment="CENTER" wrappingWidth="466.1367492675781">
+         <font>
+            <Font name="Gabriola" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="23.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 206348880" wrappingWidth="136.80343627929688">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="18.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favorie character: Sandy Cheeks" wrappingWidth="267.66669076681137">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="338.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 311505705" wrappingWidth="174.13677978515625">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="332.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favorie character: SpongeBob Squarepants" wrappingWidth="253.99999275803566">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="180.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A little bit about Us" textAlignment="CENTER" wrappingWidth="253.99999633431435">
+         <font>
+            <Font name="Gabriola" size="35.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

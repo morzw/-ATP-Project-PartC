@@ -136,7 +136,7 @@ public class MyModel extends Observable implements IModel {
                     ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                     ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                     toServer.flush();
-                    //maze.setStartPosition(currPosRow, currPosCol);
+                    maze.setStartPosition(currPosRow, currPosCol);
                     toServer.writeObject(maze);
                     toServer.flush();
                     Solution mazeSolution = (Solution)fromServer.readObject();
@@ -245,7 +245,6 @@ public class MyModel extends Observable implements IModel {
             notifyObservers("save");
         } catch (IOException e) {
             LOG.error("IO Exception: ", e);
-            //e.printStackTrace();
         }
     }
 
@@ -278,7 +277,6 @@ public class MyModel extends Observable implements IModel {
         goalPosRow = maze.getGoalPosition().getRowIndex();
         goalPosCol = maze.getGoalPosition().getColumnIndex();
         wonGame = false;
-        //
         mazeSolutionSteps = null;
         sol = null;
     }
