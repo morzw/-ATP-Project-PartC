@@ -33,7 +33,7 @@ import java.util.ResourceBundle;
 public class MyViewController extends Controller implements IView, Initializable  {
 
     @FXML
-    public TextField textFielMazeRows;
+    public TextField textField_mazeRows;
     @FXML
     public TextField textField_mazeColumns;
     @FXML
@@ -58,17 +58,17 @@ public class MyViewController extends Controller implements IView, Initializable
     private StringProperty update_player_position_row = new SimpleStringProperty();
     private StringProperty update_player_position_col = new SimpleStringProperty();
 
-//    public String get_update_player_position_row() {
-//        return update_player_position_row.get();
-//    }
+    public String get_update_player_position_row() {
+        return update_player_position_row.get();
+    }
 
     private void set_update_player_position_row(String update_player_position_row) {
         this.update_player_position_row.set(update_player_position_row);
     }
 
-//    public String get_update_player_position_col() {
-//        return update_player_position_col.get();
-//    }
+    public String get_update_player_position_col() {
+        return update_player_position_col.get();
+    }
 
     private void set_update_player_position_col(String update_player_position_col) {
         this.update_player_position_col.set(update_player_position_col);
@@ -127,18 +127,15 @@ public class MyViewController extends Controller implements IView, Initializable
     //generate maze
     public void generateMaze()
     {
-        String strRows = textFielMazeRows.getText();
+        String strRows = textField_mazeRows.getText();
         String strCols = textField_mazeColumns.getText();
         if (isValidNumber(strRows) && isValidNumber(strCols)) {
             int rows = Integer.valueOf(strRows);
             int cols = Integer.valueOf(strCols);
             viewModel.generateMaze(rows, cols);
             ShowSolution.setDisable(false);
-
-            //
             mazeDisplayer.setSolution(null);
             mazeDisplayer.setSolved(false);
-            //
         }
         else
             showErrorAlert("Values inserted aren't valid!" +
