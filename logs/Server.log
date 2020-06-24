@@ -2748,3 +2748,7 @@ java.io.EOFException: null
 2020.06.24 17:31:14.833 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 9
 2020.06.24 17:31:16.463 INFO  Model.MyModel - Generate maze server stopped
 2020.06.24 17:31:16.463 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 17:33:52.185 INFO  Model.MyModel - Generate maze server started
+2020.06.24 17:33:52.189 INFO  Model.MyModel - Solve maze server started
+2020.06.24 17:34:04.105 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 17:34:04.105 INFO  Model.MyModel - Solve maze server stopped

@@ -118,7 +118,7 @@ public abstract class Controller implements Observer, IView {
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message);
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) { //want to exit the game
+        if (result.get() == ButtonType.OK) {
             stage.close();
         }
     }

@@ -53,7 +53,7 @@ public class MyModel extends Observable implements IModel {
     private MyModel() {
         Server.setConfigurations("MazeGenerator","MyMazeGenerator");
         Server.setConfigurations("SearchingAlgorithm","Depth First Search");
-        Server.setConfigurations("ThreadPoolSize","4");
+        Server.setConfigurations("ThreadPoolSize","3");
         mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
         solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         mazeGeneratingServer.start();
