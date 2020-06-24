@@ -2,12 +2,14 @@ package View;
 
 import ViewModel.MyViewModel;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -29,7 +31,10 @@ public abstract class Controller implements Observer, IView {
             root = fxmlLoader.load();
             viewModel.addObserver(fxmlLoader.getController());
             stage.setTitle(title);
-            stage.setScene(new Scene(root,900,614));
+            if (fxmlPath.equals("AboutUsPage.fxml"))
+                stage.setScene(new Scene(root,768,432));
+            else
+                stage.setScene(new Scene(root,900,614));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -49,7 +54,7 @@ public abstract class Controller implements Observer, IView {
             if (file != null)
             {
                 if (changeScene)
-                    changeScene("../View/MyView.fxml",stage,"Load Maze");
+                    changeScene("MyView.fxml",stage,"Load Maze");
                 viewModel.loadMaze(file.getPath());
             }
             else
@@ -73,7 +78,7 @@ public abstract class Controller implements Observer, IView {
 
     public void handleAboutButton() {
         Stage aboutStage = new Stage();
-        changeScene("../View/AboutPage.fxml",aboutStage,"About");
+        changeScene("AboutPage.fxml",aboutStage,"About");
     }
 
     public void handleHelpButton() {
@@ -108,6 +113,7 @@ public abstract class Controller implements Observer, IView {
     }
 
 
+    //Alert for Confirmation
     public void showConformationAlert(String message, Stage stage)
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message);

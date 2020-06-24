@@ -67,25 +67,6 @@ public class PropertiesController extends Controller{
 
             showConformationAlert("The Properties have been changed, Please start a new game in order to load the chosen settings.", (Stage)applyChanges.getScene().getWindow());
         }
-
-//        if(actionEvent.getSource() == MyMaze || actionEvent.getSource() == SimpleMaze || actionEvent.getSource() == EmptyMaze){
-//            mazeAlgo.setText(((MenuItem)actionEvent.getSource()).getText());
-//        }
-//        if(actionEvent.getSource() == Best || actionEvent.getSource() == BFS || actionEvent.getSource() == DFS ){
-//            searchingAlgo.setText(((MenuItem)actionEvent.getSource()).getText());
-//        }
-//        if(actionEvent.getSource() == cancel){
-//            Stage stage = (Stage) cancel.getScene().getWindow();
-//            stage.close();
-//            System.out.println("Pressed CANCEL");
-//        }
-//        if(actionEvent.getSource() == apply){
-//            Server.setConfigurations("MazeGenerator",mazeAlgo.getText());
-//            Server.setConfigurations("SearchingAlgorithm", searchingAlgo.getText());
-//            ((Stage)apply.getScene().getWindow()).close();
-//            System.out.println("Pressed APPLY");
-//
-//        }
     }
 
     @Override

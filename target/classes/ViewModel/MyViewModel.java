@@ -62,7 +62,7 @@ public class MyViewModel extends Observable implements Observer {
                 goalPosRow = model.getGoalPosRow();
                 goalPosCol = model.getGoalPosCol();
                 //
-                //solution = model.getSol();
+                solution = null;
 
                 setChanged();
                 notifyObservers("update");

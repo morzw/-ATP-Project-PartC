@@ -19,7 +19,7 @@ public class AboutPageController extends Controller {
     }
 
     public void aboutUs() {
-        changeScene("AboutUsPage.fxml",(Stage)algoButton.getScene().getWindow(),"About us");
+        changeScene("AboutUsPage.fxml",(Stage)algoButton.getScene().getWindow(),"A little bit about us");
     }
 
     @Override

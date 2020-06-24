@@ -137,6 +137,7 @@ public class MyViewController extends Controller implements IView, Initializable
             ShowSolution.setDisable(false);
             mazeDisplayer.setSolution(null);
             mazeDisplayer.setSolved(false);
+
         }
         else
             showErrorAlert("Values inserted aren't valid!" +
@@ -187,7 +188,7 @@ public class MyViewController extends Controller implements IView, Initializable
             }
             else if (arg == "load incorrect file type")
             {
-                showErrorAlert("You tried to upload an unsuitable file type. Please reload a file with .maze extension only.");
+                showErrorAlert("You tried to upload an unsuitable file type or a file that does not contain a maze. Please reload a file with .maze extension only.");
             }
             else if (arg == "move") {
                 if (viewModel.isWonGame())

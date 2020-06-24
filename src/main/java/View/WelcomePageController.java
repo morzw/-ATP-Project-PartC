@@ -19,7 +19,7 @@ public class WelcomePageController extends Controller implements Initializable {
     public Button newGame;
 
     public void handleNewGame() {
-        changeScene("../View/MyView.fxml",(Stage)newGame.getScene().getWindow(),"New Maze");
+        changeScene("MyView.fxml",(Stage)newGame.getScene().getWindow(),"New Maze");
     }
 
     public void handleLoadMaze() {

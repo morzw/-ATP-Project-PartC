@@ -21,7 +21,7 @@ public class MenuBarController extends Controller {
     public Label exitLabel;
 
     public void handleNewFile(ActionEvent actionEvent) {
-        changeScene("../View/MyView.fxml",(Stage)menuBar.getScene().getWindow(),"New Maze");
+        changeScene("MyView.fxml",(Stage)menuBar.getScene().getWindow(),"New Maze");
     }
 
     public void handleSaveFile(ActionEvent actionEvent) {

@@ -6,12 +6,12 @@
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="585.0" stylesheets="@AboutStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AboutPageController">
    <children>
-      <Button fx:id="algoButton" layoutX="27.0" layoutY="202.0" mnemonicParsing="false" onAction="#aboutAlgo" onMouseClicked="#aboutUs" prefHeight="57.0" prefWidth="150.0" text="Algorithms" textAlignment="CENTER">
+      <Button fx:id="algoButton" layoutX="27.0" layoutY="91.0" mnemonicParsing="false" onAction="#aboutAlgo" onMouseClicked="#aboutUs" prefHeight="57.0" prefWidth="150.0" text="Algorithms" textAlignment="CENTER">
          <font>
             <Font name="Gabriola" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="aboutUsB" layoutX="27.0" layoutY="274.0" mnemonicParsing="false" onAction="#aboutUs" onMouseClicked="#aboutUs" text="About us !!!" textAlignment="CENTER">
+      <Button fx:id="aboutUsB" layoutX="24.0" layoutY="151.0" mnemonicParsing="false" onAction="#aboutUs" onMouseClicked="#aboutUs" text="About us !!!" textAlignment="CENTER">
          <font>
             <Font name="Gabriola" size="30.0" />
          </font>
