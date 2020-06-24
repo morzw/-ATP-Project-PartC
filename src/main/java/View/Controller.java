@@ -35,7 +35,7 @@ public abstract class Controller implements Observer, IView {
                 stage.setScene(new Scene(root,900,614));
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace(); //check?
         }
     }
 
