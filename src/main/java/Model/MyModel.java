@@ -319,4 +319,5 @@ public class MyModel extends Observable implements IModel {
         solveSearchProblemServer.stop();
         LOG.info("Solve maze server stopped");
     }
+
 }
