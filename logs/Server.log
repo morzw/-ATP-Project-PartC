@@ -2748,7 +2748,17 @@ java.io.EOFException: null
 2020.06.24 17:31:14.833 INFO  Model.MyModel - A solution for the maze was created. Solution number of steps - 9
 2020.06.24 17:31:16.463 INFO  Model.MyModel - Generate maze server stopped
 2020.06.24 17:31:16.463 INFO  Model.MyModel - Solve maze server stopped
-2020.06.24 17:33:52.185 INFO  Model.MyModel - Generate maze server started
-2020.06.24 17:33:52.189 INFO  Model.MyModel - Solve maze server started
-2020.06.24 17:34:04.105 INFO  Model.MyModel - Generate maze server stopped
-2020.06.24 17:34:04.105 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 18:07:54.268 INFO  Model.MyModel - Generate maze server started
+2020.06.24 18:07:54.271 INFO  Model.MyModel - Solve maze server started
+2020.06.24 18:08:01.153 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 18:08:01.154 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 18:08:01.167 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 18:08:16.237 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 18:08:16.238 INFO  Model.MyModel - Solve maze server stopped
+2020.06.24 18:08:53.905 INFO  Model.MyModel - Generate maze server started
+2020.06.24 18:08:53.908 INFO  Model.MyModel - Solve maze server started
+2020.06.24 18:09:00.543 INFO  Model.MyModel - User info DESKTOP-QRE0NM9/192.168.45.1requests to generate a maze
+2020.06.24 18:09:00.544 INFO  Model.MyModel - A maze creation request was accepted! Generating maze using MyMazeGenerator
+2020.06.24 18:09:00.557 INFO  Model.MyModel - A new maze has been created. Maze dimensions - 10 X 10
+2020.06.24 18:09:14.009 INFO  Model.MyModel - Generate maze server stopped
+2020.06.24 18:09:14.010 INFO  Model.MyModel - Solve maze server stopped

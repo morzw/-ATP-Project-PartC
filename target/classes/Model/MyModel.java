@@ -10,6 +10,8 @@ import ViewModel.MyViewModel;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
 import algorithms.search.Solution;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,6 +35,7 @@ public class MyModel extends Observable implements IModel {
     private boolean wonGame;
     private ArrayList<AState> mazeSolutionSteps;
     private ArrayList<int[]> sol;
+    public MediaPlayer mediaPlayer;
     private static final Logger LOG = LogManager.getLogger(); //Log4j2
 
     public int[][] getMazeArray() { return mazeArray; }
@@ -170,18 +173,26 @@ public class MyModel extends Observable implements IModel {
             case 1: //Up
                 if (isValidMove(currPosRow-1, currPosCol))
                     currPosRow--;
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 2: //Down
                 if (isValidMove(currPosRow+1, currPosCol))
                     currPosRow++;
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 3: //Left
                 if (isValidMove(currPosRow, currPosCol-1))
                     currPosCol--;
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 4: //Right
                 if (isValidMove(currPosRow, currPosCol+1))
                     currPosCol++;
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 5: //Up Left
                 if (isValidMove(currPosRow-1, currPosCol-1))
@@ -189,6 +200,8 @@ public class MyModel extends Observable implements IModel {
                     currPosRow--;
                     currPosCol--;
                 }
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 6: //Up Right
                 if (isValidMove(currPosRow-1, currPosCol+1))
@@ -196,6 +209,8 @@ public class MyModel extends Observable implements IModel {
                     currPosRow--;
                     currPosCol++;
                 }
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 7: //Down Left
                 if (isValidMove(currPosRow+1, currPosCol-1))
@@ -203,6 +218,8 @@ public class MyModel extends Observable implements IModel {
                     currPosRow++;
                     currPosCol--;
                 }
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
             case 8: //Down Right
                 if (isValidMove(currPosRow+1, currPosCol+1))
@@ -210,6 +227,8 @@ public class MyModel extends Observable implements IModel {
                     currPosRow++;
                     currPosCol++;
                 }
+                else
+                    playAudio("resources/Music/SpongebobLaugh.mp3");
                 break;
         }
         //checks if won the game
@@ -229,6 +248,14 @@ public class MyModel extends Observable implements IModel {
                 wantedCol < 0 || wantedCol >= mazeArray[0].length || mazeArray[wantedRow][wantedCol] == 1)
             return false;
         return true;
+    }
+
+    //music - bumped in a wall
+    protected void playAudio(String audio) {
+        String musicFile = audio;
+        Media sound = new Media(new java.io.File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     @Override

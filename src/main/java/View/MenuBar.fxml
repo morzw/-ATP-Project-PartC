@@ -9,9 +9,9 @@
 
 <AnchorPane fx:id="wPane" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MenuBarController">
     <children>
-        <BorderPane prefHeight="660.0" prefWidth="900.0">
+        <BorderPane prefHeight="660.0" prefWidth="1300.0">
          <top>
-                <MenuBar fx:id="menuBar" prefWidth="700.0" BorderPane.alignment="CENTER">
+                <MenuBar fx:id="menuBar" prefWidth="1100.0" BorderPane.alignment="CENTER">
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>

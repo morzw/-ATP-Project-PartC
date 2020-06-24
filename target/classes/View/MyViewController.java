@@ -91,7 +91,7 @@ public class MyViewController extends Controller implements IView, Initializable
     private void adjustDisplaySize() {
         //adjusts the size of the pane to borderPane
         borderPane.widthProperty().addListener((obs, oldVal, newVal) -> {
-            pane.setMinHeight(borderPane.getWidth());
+            pane.setMinWidth(borderPane.getWidth()-200);
             if (viewModel.getMazeArray() != null)
                 mazeDisplayer.draw();
         });
@@ -180,7 +180,7 @@ public class MyViewController extends Controller implements IView, Initializable
 
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
-                this.zoom(mazeDisplayer);
+                zoom(mazeDisplayer);
 
                 ShowSolution.setDisable(false);
                 HideSolution.setDisable(true);
