@@ -26,7 +26,7 @@
          <graphic>
             <ImageView fx:id="backImage" fitHeight="68.0" fitWidth="60.0" onMouseClicked="#handleBackToAbout" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/Images/backNew.png" />
+                  <Image url="/Images/backArrow.png" />
                </image>
             </ImageView>
          </graphic>

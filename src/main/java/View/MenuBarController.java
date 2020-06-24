@@ -2,24 +2,23 @@ package View;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+
+import java.net.URL;
 import java.util.Observable;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class MenuBarController extends Controller {
 
     @FXML
     public MenuBar menuBar;
     @FXML
-    public Label exitLable;
-
-//    public MenuBar getMenuBar() { return menuBar; }
-//
-//    public void setMenuBar(MenuBar menuBar) {
-//        this.menuBar = menuBar;
-//    }
+    public Label exitLabel;
 
     public void handleNewFile(ActionEvent actionEvent) {
         changeScene("../View/MyView.fxml",(Stage)menuBar.getScene().getWindow(),"New Maze");
@@ -51,7 +50,7 @@ public class MenuBarController extends Controller {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) { //want to exit the game
             viewModel.exit();
-            Window welcome = exitLable.getScene().getWindow();
+            Window welcome = exitLabel.getScene().getWindow();
             ((Stage)welcome).close();
         }
     }

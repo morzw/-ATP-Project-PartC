@@ -65,7 +65,7 @@ public class PropertiesController extends Controller{
             Server.setConfigurations("MazeGenerator",mazeAlgo.getText());
             Server.setConfigurations("SearchingAlgorithm", searchingAlgo.getText());
 
-            showConformationAlert("The Properties have been changed, Please start an new game in order load the the chosen settings.", (Stage)applyChanges.getScene().getWindow());
+            showConformationAlert("The Properties have been changed, Please start a new game in order to load the chosen settings.", (Stage)applyChanges.getScene().getWindow());
         }
 
 //        if(actionEvent.getSource() == MyMaze || actionEvent.getSource() == SimpleMaze || actionEvent.getSource() == EmptyMaze){

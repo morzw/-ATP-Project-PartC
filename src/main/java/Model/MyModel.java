@@ -263,7 +263,6 @@ public class MyModel extends Observable implements IModel {
         } catch (IOException|ClassNotFoundException e) {
             setChanged();
             notifyObservers("load incorrect file type");
-//            LOG.error("IO/Class Not Found Exception : ", e);
             LOG.error("IO/Class Not Found Exception : Not a maze file");
             //e.printStackTrace();
         }

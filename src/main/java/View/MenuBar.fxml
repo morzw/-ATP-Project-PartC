@@ -37,7 +37,7 @@
                         </Menu>
                         <Menu mnemonicParsing="false">
                      <graphic>
-                                <Label fx:id="exitLable" onMouseClicked="#handleExit" text="Exit" />
+                                <Label fx:id="exitLabel" onMouseClicked="#handleExit" text="Exit" />
                      </graphic>
                         </Menu>
                     </menus>

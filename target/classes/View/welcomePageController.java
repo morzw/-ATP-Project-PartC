@@ -42,7 +42,7 @@ public class WelcomePageController extends Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         viewModel.pauseMusic();
         try{
-            viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobCaptain.mpeg").toURI().toString())),200);
+            viewModel.playMusic((new Media(getClass().getResource("/Music/SpongeBobCaptain.mp3").toURI().toString())),200);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }

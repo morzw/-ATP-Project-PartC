@@ -29,8 +29,7 @@ public abstract class Controller implements Observer, IView {
             root = fxmlLoader.load();
             viewModel.addObserver(fxmlLoader.getController());
             stage.setTitle(title);
-//            stage.setScene(new Scene(root,900,660));
-            stage.setScene(new Scene(root,900,600));
+            stage.setScene(new Scene(root,900,614));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
