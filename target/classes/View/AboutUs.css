@@ -1,8 +1,28 @@
 .root{
     /*-fx-background-color: lightblue;*/
-    -fx-background-image: url("/Images/algoBackground.jpg");
+    -fx-background-image: url("/Images/spongOnJelly.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+
+#backToAbout {
+    -fx-background-color: none;
+    -fx-text-fill: Black;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 31;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#backToAbout:hover{
+    -fx-background-image: url("/Images/pinkAll.jpg");
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
 }
