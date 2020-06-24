@@ -180,7 +180,7 @@ public class MyViewController extends Controller implements IView, Initializable
 
                 set_update_player_position_row(viewModel.getCurrPosRow() + "");
                 set_update_player_position_col(viewModel.getCurrPosCol() + "");
-                zoom(mazeDisplayer);
+                this.zoom(mazeDisplayer);
 
                 ShowSolution.setDisable(false);
                 HideSolution.setDisable(true);
