@@ -111,7 +111,6 @@ public class MyViewController extends Controller implements IView, Initializable
             if (viewModel.getMazeArray() != null)
                 mazeDisplayer.draw();
         });
-        pane.toBack();
     }
 
     //validation check for generate maze
@@ -274,5 +273,4 @@ public class MyViewController extends Controller implements IView, Initializable
                 }
             });
     }
-
 }

@@ -32,12 +32,11 @@ public class Main extends Application {
         Controller welcomeController = fxmlLoader.getController();
         viewModel.addObserver(welcomeController);
 
-        Rectangle2D openingScene = Screen.getPrimary().getBounds();
+//        Rectangle2D openingScene = Screen.getPrimary().getBounds();
         primaryStage.setTitle("***SpongeBob SquarePants Maze 2020***");
         primaryStage.setScene(new Scene(root,900,614));
         primaryStage.setResizable(true);
         primaryStage.show();
-
         setStageCloseEvent(primaryStage, (MyModel) model);
     }
 

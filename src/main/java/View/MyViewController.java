@@ -273,5 +273,4 @@ public class MyViewController extends Controller implements IView, Initializable
                 }
             });
     }
-
 }
